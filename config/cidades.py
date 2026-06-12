@@ -1,14 +1,14 @@
 APS = {
   "bauru": [
     "Bauru",
-    "Piratininga
+    "Piratininga"
   ],
   "são josé do rio preto": [
     "São José do Rio Preto",
     "Bady Bassit",
     "Cedral",
     "Guapiaçu",
-    "Mirassol
+    "Mirassol"
   ],
   "são josé dos campos": [
     "São José dos Campos",
