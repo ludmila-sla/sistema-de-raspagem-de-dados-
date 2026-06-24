@@ -1,0 +1,38 @@
+name: Executar Scraping e Processamento Real
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrapar-e-processar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Instalar Dependências
+      run: |
+        python -m pip install --upgrade pip
+        pip install beautifulsoup4 requests
+        
+    - name: Executar Scraper OLX
+      env:
+        SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
+      run: |
+        python main.py
+
+    - name: Executar Processamento de Dados
+      run: |
+        python processar_dados.py <<< "" # O <<< "" simula o 'Enter' para pegar a data de hoje automaticamente
+
+    - name: Salvar Dados Processados (Artifact)
+      uses: actions/upload-artifact@v4
+      with:
+        name: dados-olx-processados
+        path: data/processed/*.json
