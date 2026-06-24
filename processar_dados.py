@@ -7,6 +7,36 @@ from datetime import datetime
 log_dir = os.path.join("logs", "logs")
 logging.basicConfig(filename=os.path.join(log_dir, "processamento.log"), level=logging.INFO)
 
+def extrair_anuncio_olx(elemento_ad, municipio):
+    """
+    Exemplo de extração de um bloco de anúncio usando o normalizador
+    """
+    dados_anuncio = {
+        "id_anuncio": elemento_ad.get("data-id") or elemento_ad.get("id"),
+        "municipio": municipio,
+        "area": None,
+        "preco_total": None,
+        "condominio": 0.0,
+        "iptu": 0.0,
+        "localizacao": None
+    }
+    
+    detalhes = elemento_ad.select(".caracteristica") 
+    
+    for detalhe in detalhes:
+        label_html = detalhe.select_one(".label").get_text()
+        value_html = detalhe.select_one(".value").get_text()
+
+        campo_sistema = mapear_campo_sistema(label_html)
+        
+        if campo_sistema:
+            if campo_sistema in ["area", "preco_total", "condominio", "iptu"]:
+                dados_anuncio[campo_sistema] = tratar_valor_numerico(campo_sistema, value_html)
+            else:
+                dados_anuncio[campo_sistema] = value_html.strip()
+                
+    return dados_anuncio
+
 def processar_lote_olx(data_lote):
     pasta_raw = os.path.join("data", "raw", "olx", data_lote)
     pasta_processed = os.path.join("data", "processed")
