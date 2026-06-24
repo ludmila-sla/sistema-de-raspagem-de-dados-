@@ -5,9 +5,13 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from utils.normalizador import mapear_campo_sistema, tratar_valor_numerico
 
-log_dir = os.path.join("logs", "logs")
+log_dir = "logs_processamento"
 os.makedirs(log_dir, exist_ok=True)
-logging.basicConfig(filename=os.path.join(log_dir, "processamento.log"), level=logging.INFO)
+logging.basicConfig(
+    filename=os.path.join(log_dir, "processamento.log"), 
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
 
 def extrair_anuncio_olx(elemento_ad, municipio):
     link_element = elemento_ad.select_one("a[data-testid='adcard-link']")
