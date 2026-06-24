@@ -71,6 +71,7 @@ def processar_lote_olx(data_lote):
             
             with open(caminho_arquivo, "r", encoding="utf-8") as f:
                 html_content = f.read()
+                print(f"=== DEBUG: Arquivo {arquivo} carregado com {len(html_content)} caracteres. ===")
             
             soup = BeautifulSoup(html_content, "html.parser")
 
