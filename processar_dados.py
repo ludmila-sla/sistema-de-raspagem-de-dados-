@@ -1,4 +1,5 @@
 import os
+import hashlib
 import json
 import logging
 from bs4 import BeautifulSoup
@@ -18,10 +19,7 @@ def extrair_anuncio_olx(elemento_ad, municipio):
     href = link_element.get("href") if link_element else ""
     id_anuncio = None
     if href:
-        ultima_parte = href.split("/")[-1]
-        id_numerico = "".join(c for c in ultima_parte if c.isdigit())
-        if id_numerico:
-            id_anuncio = id_numerico
+        id_anuncio = hashlib.md5(href.strip().encode('utf-8')).hexdigest()
     
     dados_anuncio = {
         "id_anuncio": elemento_ad.get("data-id") or elemento_ad.get("id"),
