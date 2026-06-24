@@ -14,7 +14,7 @@ logging.basicConfig(
 )
 
 def extrair_anuncio_olx(elemento_ad, municipio):
-    link_element = elemento_ad.select_one("a.olx-adcard__link")
+    link_element = elemento_ad.select_one("a[class*='olx-adcard__link']")
     href = link_element.get("href") if link_element else ""
     id_anuncio = None
     if href and "-" in href:
@@ -73,12 +73,12 @@ def processar_lote_olx(data_lote):
             
             soup = BeautifulSoup(html_content, "html.parser")
 
-            cards_anuncios = soup.select("section.olx-adcard")
+            cards_anuncios = soup.select("section[class^='olx-adcard']")
             
             for card in cards_anuncios:
                 try:
                     dados_ad = extrair_anuncio_olx(card, municipio_nome)
-                    if dados_ad.get("id_anuncio"):
+                    if dados_ad and dados_ad.get("id_anuncio"):
                         dados_processados_lote.append(dados_ad)
                 except Exception as e:
                     logging.warning(f"Falha ao processar anúncio individual no arquivo {arquivo}: {e}")
