@@ -28,14 +28,25 @@ def limpar_texto(texto):
     return texto
 
 def mapear_campo_sistema(termo_html):
-    termo_limpo = limpar_texto(termo_html)
+    if not texto_html:
+        return None
+    texto = texto_html.lower().strip()
     
-    for campo_oficial, variacoes in MAPEAMENTO_CAMPOS.items():
-        for variacao in variacoes:
-            variacao_limpa = limpar_texto(variacao)
-            if variacao_limpa in termo_limpo:
-                return campo_oficial
-                
+    if "metro" in texto or "m²" in texto or "area" in texto or "tamanho" in texto:
+        return "area"
+        
+    if "preço" in texto or "preco" in texto or "valor" in texto:
+        return "preco_total"
+        
+    if "condomínio" in texto or "condominio" in texto:
+        return "condominio"
+        
+    if "iptu" in texto:
+        return "iptu"
+        
+    if "localização" in texto or "localizacao" in texto or "endereço" in texto:
+        return "localizacao"
+        
     return None
 
 def tratar_valor_numerico(campo, valor_texto):
