@@ -10,27 +10,36 @@ os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(filename=os.path.join(log_dir, "processamento.log"), level=logging.INFO)
 
 def extrair_anuncio_olx(elemento_ad, municipio):
+    link_element = elemento_ad.select_one("a[data-testid='adcard-link']")
+    href = link_element.get("href") if link_element else ""
+    id_anuncio = href.split("-")[-1] if href else None
+    
     dados_anuncio = {
         "id_anuncio": elemento_ad.get("data-id") or elemento_ad.get("id"),
         "municipio": municipio,
+        "titulo": link_element.get_text().strip() if link_element else None,
+        "url": href,
         "area": None,
         "preco_total": None,
         "condominio": 0.0,
         "iptu": 0.0,
         "localizacao": None
     }
-    
+    preco_element = elemento_ad.select_one(".olx-adcard__price")
+    if preco_element:
+        dados_anuncio["preco_total"] = tratar_valor_numerico("preco_total", preco_element.get_text())
+        
+    localizacao_element = elemento_ad.select_one(".olx-adcard__location")
+    if localizacao_element:
+        dados_anuncio["localizacao"] = localizacao_element.get_text().strip()
     detalhes = elemento_ad.select(".caracteristica") 
     for detalhe in detalhes:
-        label_html = detalhe.select_one(".label").get_text()
-        value_html = detalhe.select_one(".value").get_text()
+        label_texto = detalhe.get("aria-label") or detalhe.get_text()
+        value_texto = detalhe.get_text()
 
-        campo_sistema = mapear_campo_sistema(label_html)
-        if campo_sistema:
-            if campo_sistema in ["area", "preco_total", "condominio", "iptu"]:
-                dados_anuncio[campo_sistema] = tratar_valor_numerico(campo_sistema, value_html)
-            else:
-                dados_anuncio[campo_sistema] = value_html.strip()
+        campo_sistema = mapear_campo_sistema(label_texto)
+        if campo_sistema and campo_sistema in ["area", "condominio", "iptu"]:
+                    dados_anuncio[campo_sistema] = tratar_valor_numerico(campo_sistema, value_texto)
                 
     return dados_anuncio
 
@@ -58,7 +67,7 @@ def processar_lote_olx(data_lote):
             
             soup = BeautifulSoup(html_content, "html.parser")
 
-            cards_anuncios = soup.select("[data-lurker-detail='list_id']")
+            cards_anuncios = soup.select("section.olx-adcard")
             
             for card in cards_anuncios:
                 try:
