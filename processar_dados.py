@@ -17,8 +17,13 @@ def extrair_anuncio_olx(elemento_ad, municipio):
     link_element = elemento_ad.select_one("a[class*='olx-adcard__link']")
     href = link_element.get("href") if link_element else ""
     id_anuncio = None
-    if href and "-" in href:
-        id_anuncio = href.split("-")[-1].strip()
+   if href:
+        # Pega a última parte após a última barra "/"
+        ultima_parte = href.split("/")[-1]
+        # Filtra mantendo apenas os dígitos numéricos do final da string
+        id_numerico = "".join(c for c in ultima_parte if c.isdigit())
+        if id_numerico:
+            id_anuncio = id_numerico
     
     dados_anuncio = {
         "id_anuncio": elemento_ad.get("data-id") or elemento_ad.get("id"),
