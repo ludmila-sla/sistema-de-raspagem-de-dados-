@@ -1,9 +1,7 @@
 import os
-import sys
-import json
+import logging
 import requests
 from datetime import datetime
-from bs4 import BeautifulSoup
 
 log_dir = os.path.join("logs", "logs")
 os.makedirs(log_dir, exist_ok=True)
@@ -23,31 +21,22 @@ _REGIOES_OLX = {
     "são josé dos campos": "regiao-de-vale-do-paraiba-e-litoral-norte",
     "sorocaba": "regiao-de-sorocaba"
 }
+
 def normalizar_string(texto):
     import unicodedata
     texto_normalizado = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
     return texto_normalizado.lower().replace(" ", "-")
-    
-def construir_url_olx(cidade):
-    cidade_formatada = cidade.lower().replace(" ", "-")
-    
-    if "bauru" in cidade_formatada or "piratininga" in cidade_formatada:
-        return f"https://www.olx.com.br/imoveis/terrenos/estado-sp/regiao-de-bauru-e-marilia/{cidade_formatada}"
-    
-    return f"https://www.olx.com.br/imoveis/terrenos/estado-sp/{cidade_formatada}"
 
-
-def executar_scraping_olx():
+def executar_scraping_olx(estrutura_aps):
     if not API_KEY:
         logging.error("SCRAPINGBEE_API_KEY não configurada no ambiente.")
         return
 
     data_atual = datetime.now().strftime("%Y-%m-%d")
-    
     output_dir = os.path.join("data", "raw", "olx", data_atual)
     os.makedirs(output_dir, exist_ok=True)
 
-    for microregiao, municipios in APS.items():
+    for microregiao, municipios in estrutura_aps.items():
         regiao_olx = _REGIOES_OLX.get(microregiao.lower(), normalizar_string(microregiao))
         
         for municipio in municipios:
