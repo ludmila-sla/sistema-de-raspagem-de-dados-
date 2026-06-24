@@ -20,7 +20,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install beautifulsoup4 requests
-        
+
     - name: Executar Scraper OLX
       env:
         SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
@@ -29,10 +29,17 @@ jobs:
 
     - name: Executar Processamento de Dados
       run: |
-        python processar_dados.py <<< "" # O <<< "" simula o 'Enter' para pegar a data de hoje automaticamente
+        python processar_dados.py <<< ""
 
-    - name: Salvar Dados Processados (Artifact)
-      uses: actions/upload-artifact@v4
-      with:
-        name: dados-olx-processados
-        path: data/processed/*.json
+    - name: Commitar dados diretamente no repositório
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        
+        # Adiciona apenas os novos arquivos JSON gerados na pasta processed
+        git add data/processed/*.json
+        
+        # Só faz o commit se houver novos dados para evitar falhas caso o scraper não traga nada
+        git diff-index --quiet HEAD || git commit -m "bot: atualizando dados extraídos da OLX [skip ci]"
+        
+        git push
