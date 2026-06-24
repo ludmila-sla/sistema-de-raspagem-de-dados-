@@ -52,6 +52,7 @@ def test_extraicao_completa_anuncio(self):
         self.assertEqual(dados["municipio"], "Bauru")
         self.assertEqual(dados["preco_total"], 130000.0)
         self.assertEqual(dados["localizacao"], "Bauru, Parque Viaduto")
+        self.assertEqual(dados["area"], 167.0)
         self.assertTrue(dados["url"].endswith("1512978359"))
 
 if __name__ == "__main__":
