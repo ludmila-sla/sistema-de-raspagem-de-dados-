@@ -14,9 +14,11 @@ logging.basicConfig(
 )
 
 def extrair_anuncio_olx(elemento_ad, municipio):
-    link_element = elemento_ad.select_one("a[data-testid='adcard-link']")
+    link_element = elemento_ad.select_one("a.olx-adcard__link")
     href = link_element.get("href") if link_element else ""
-    id_anuncio = href.split("-")[-1] if href else None
+    id_anuncio = None
+    if href and "-" in href:
+        id_anuncio = href.split("-")[-1].strip()
     
     dados_anuncio = {
         "id_anuncio": elemento_ad.get("data-id") or elemento_ad.get("id"),
