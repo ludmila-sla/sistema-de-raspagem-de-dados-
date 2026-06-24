@@ -5,9 +5,29 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+log_dir = os.path.join("logs", "logs")
+os.makedirs(log_dir, exist_ok=True)
+logging.basicConfig(
+    filename=os.path.join(log_dir, f"scraper_olx_{datetime.now().strftime('%Y%m%d')}.log"),
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    filemode="a"
+)
+
 API_KEY = os.environ.get("SCRAPINGBEE_API_KEY")
 URL_GATEWAY = "https://app.scrapingbee.com/api/v1/"
 
+_REGIOES_OLX = {
+    "bauru": "regiao-de-bauru-e-marilia",
+    "são josé do rio preto": "regiao-de-sao-jose-do-rio-preto",
+    "são josé dos campos": "regiao-de-vale-do-paraiba-e-litoral-norte",
+    "sorocaba": "regiao-de-sorocaba"
+}
+def normalizar_string(texto):
+    import unicodedata
+    texto_normalizado = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
+    return texto_normalizado.lower().replace(" ", "-")
+    
 def construir_url_olx(cidade):
     cidade_formatada = cidade.lower().replace(" ", "-")
     
@@ -17,68 +37,43 @@ def construir_url_olx(cidade):
     return f"https://www.olx.com.br/imoveis/terrenos/estado-sp/{cidade_formatada}"
 
 
-def salvar_html_bruto(cidade, conteudo_html, data_coleta):
-
-    diretorio_destino = os.path.join("data", "raw", data_coleta)
-    os.makedirs(diretorio_destino, exist_ok=True)
-    
-    nome_arquivo = f"olx_{cidade.lower().replace(' ', '_')}.html"
-    caminho_final = os.path.join(diretorio_destino, nome_arquivo)
-    
-    with open(caminho_final, "w", encoding="utf-8") as f:
-        f.write(conteudo_html)
-        
-    print(f"[+] Backup salvo em: {caminho_final}")
-    return caminho_final
-
-
-def extrair_campos_filtros(caminho_html, campos_alvo):
-  
-    with open(caminho_html, "r", encoding="utf-8") as f:
-        html_content = f.read()
-        
-    soup = BeautifulSoup(html_content, "html.parser")
-    dados_extraidos = []
-    
-    script_dados = soup.find("script", id="__NEXT_DATA__")
-    
-    if script_dados:
-        try:
-            json_interno = json.loads(script_dados.string)
-            print("[*] Tag __NEXT_DATA__ localizada. Pronto para extração estruturada.")
-        except json.JSONDecodeError:
-            print("[-] Falha ao decodificar o JSON interno do script.")
-            
-    return dados_extraidos
-
-
-def executar_scraping_olx(lista_cidades, campos_alvo):
+def executar_scraping_olx():
     if not API_KEY:
-        print("[-] Erro Crítico: SCRAPINGBEE_API_KEY não foi encontrada nas variáveis de ambiente.", file=sys.stderr)
+        logging.error("SCRAPINGBEE_API_KEY não configurada no ambiente.")
         return
-        
+
     data_atual = datetime.now().strftime("%Y-%m-%d")
     
-    for cidade in lista_cidades:
-        print(f"\n[*] Iniciando coleta OLX para: {cidade}")
-        url_alvo = construir_url_olx(cidade)
+    output_dir = os.path.join("data", "raw", "olx", data_atual)
+    os.makedirs(output_dir, exist_ok=True)
+
+    for microregiao, municipios in APS.items():
+        regiao_olx = _REGIOES_OLX.get(microregiao.lower(), normalizar_string(microregiao))
         
-        params = {
-            "api_key": API_KEY,
-            "url": url_alvo,
-            "country_code": "br",
-            "premium_proxy": "true",
-            "render_js": "false"  
-        
-        try:
-            response = requests.get(URL_GATEWAY, params=params, timeout=30)
+        for municipio in municipios:
+            municipio_slug = normalizar_string(municipio)
+            url_busca = f"https://www.olx.com.br/imoveis/terrenos/estado-sp/{regiao_olx}/{municipio_slug}"
             
-            if response.status_code == 200:
-                caminho_arquivo = salvar_html_bruto(cidade, response.text, data_atual)
-                
-                extrair_campos_filtros(caminho_arquivo, campos_alvo)
-            else:
-                print(f"[-] Erro na API ScrapingBee: Status {response.status_code} para {cidade}", file=sys.stderr)
-                
-        except Exception as e:
-            print(f"[-] Falha catastrófica ao requisitar {cidade}: {str(e)}", file=sys.stderr)
+            logging.info(f"Requisitando: {municipio} -> URL: {url_busca}")
+            
+            params = {
+                "api_key": API_KEY,
+                "url": url_busca,
+                "country_code": "br",
+                "premium_proxy": "true",
+                "render_js": "false"
+            }
+            
+            try:
+                response = requests.get(URL_GATEWAY, params=params, timeout=45)
+                if response.status_code == 200:
+                    nome_arquivo = f"{municipio_slug}.html"
+                    caminho_final = os.path.join(output_dir, nome_arquivo)
+                    
+                    with open(caminho_final, "w", encoding="utf-8") as f:
+                        f.write(response.text)
+                    logging.info(f"Sucesso ao salvar arquivo bruto: {caminho_final}")
+                else:
+                    logging.error(f"Erro HTTP {response.status_code} para o município {municipio}")
+            except Exception as e:
+                logging.exception(f"Falha crítica de rede ao processar o município {municipio}: {str(e)}")
