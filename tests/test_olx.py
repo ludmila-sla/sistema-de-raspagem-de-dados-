@@ -46,8 +46,27 @@ class TestPipelineOLX(unittest.TestCase):
         self.assertEqual(mapear_campo_sistema("Campo Inexistente"), None)
 
     def test_extraicao_completa_anuncio(self):
+        """Testa se a função extrair_anuncio_olx parseia o HTML real corretamente"""
+        
+        # DEBUG 1: Vamos ver se o seletor principal está achando o card
+        print("\n=== DEBUG: CASO O CARD SEJA ENCONTRADO ===")
+        print(f"Objeto card é None? {self.card is None}")
+        if self.card:
+            print(f"Classes encontradas no card: {self.card.get('class')}")
+            
+            # DEBUG 2: Vamos ver se ele acha o link dentro do card
+            link = self.card.select_one("a[class*='olx-adcard__link']")
+            print(f"Link encontrado: {link}")
+            if link:
+                print(f"Href do link: {link.get('href')}")
+
         dados = extrair_anuncio_olx(self.card, "Bauru")
         
+        print("\n=== DEBUG: DICIONÁRIO RETORNADO PELA FUNÇÃO ===")
+        print(dados)
+        print("==============================================\n")
+        
+        # Validações estritas dos dados extraídos
         self.assertEqual(dados["id_anuncio"], "1512978359")
         self.assertEqual(dados["municipio"], "Bauru")
         self.assertEqual(dados["preco_total"], 130000.0)
