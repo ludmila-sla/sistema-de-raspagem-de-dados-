@@ -27,7 +27,7 @@ def limpar_texto(texto):
     texto = ''.join(c for c in unicodedata.normalize('NFKD', texto) if not unicodedata.combining(c))
     return texto
 
-def mapear_campo_sistema(termo_html):
+def mapear_campo_sistema(texto_html):
     if not texto_html:
         return None
     texto = texto_html.lower().strip()
