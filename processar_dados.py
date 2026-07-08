@@ -108,47 +108,57 @@ def processar_lote_olx(data_lote):
     except Exception as e:
         logging.exception(f"Falha crítica no processamento do lote {data_lote}. Operação abortada.")
         print(f"[-] ERRO CRÍTICO: O processamento falhou. Nada foi salvo. Verifique os arquivos de log.")
+        
 def processar_html_zap(html_content, municipio):
     """
-    Extrai anúncios do Zap Imóveis varrendo o objeto JSON interno do NextJS.
+    Extrai anúncios do Zap Imóveis varrendo as tags LD+JSON (Schema.org) do HTML.
     """
     dados_extraidos = []
     soup = BeautifulSoup(html_content, "html.parser")
     
-    script_tag = soup.find("script", id="__NEXT_DATA__")
-    if not script_tag:
-        return dados_extraidos
+    scripts = soup.find_all("script", type="application/ld+json")
+    
+    for script in scripts:
+        if not script.string:
+            continue
+        try:
+            payload = json.loads(script.string)
 
-    try:
-        payload = json.loads(script_tag.string)
-        listings = payload.get("props", {}).get("pageProps", {}).get("results", {}).get("listings", [])
-        
-        for item in listings:
-            listing = item.get("listing", {})
-            link_relativo = listing.get("url", "")
-            url_completa = f"https://www.zapimoveis.com.br{link_relativo}" if link_relativo else ""
+            if payload.get("@type") == "ItemList":
+                itens = payload.get("itemListElement", [])
+                
+                for elemento in itens:
+                    item = elemento.get("item", {})
+                    url_completa = item.get("url", "")
+                    
+                    id_anuncio = None
+                    if url_completa:
+                        id_anuncio = hashlib.md5(url_completa.strip().encode('utf-8')).hexdigest()
+                    
+                    offers = item.get("offers", {})
+                    condo_prop = offers.get("additionalProperty", {})
+                    condo_value = condo_prop.get("value", 0.0) if condo_prop.get("name") == "Condominium Fee" else 0.0
+                    
+                    dados_ad = {
+                        "id_anuncio": id_anuncio,
+                        "municipio": municipio,
+                        "titulo": item.get("name"),
+                        "url": url_completa,
+                        "area": float(item.get("floorSize", {}).get("value", 0)) if item.get("floorSize") else None,
+                        "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
+                        "condominio": float(condo_value),
+                        "iptu": 0.0, 
+                        "localizacao": item.get("address", {}).get("addressLocality", "")
+                    }
+                    
+                    if id_anuncio:
+                        dados_extraidos.append(dados_ad)
+                
+                break 
+                
+        except Exception as e:
+            logging.warning(f"Erro ao fazer o parse do JSON LD do Zap: {e}")
             
-            id_anuncio = None
-            if url_completa:
-                id_anuncio = hashlib.md5(url_completa.strip().encode('utf-8')).hexdigest()
-            
-            dados_ad = {
-                "id_anuncio": id_anuncio,
-                "municipio": municipio,
-                "titulo": listing.get("title"),
-                "url": url_completa,
-                "area": float(listing.get("usableAreas", [0])[0]) if listing.get("usableAreas") else None,
-                "preco_total": float(listing.get("pricingInfos", [{}])[0].get("price", 0)) if listing.get("pricingInfos") else None,
-                "condominio": float(listing.get("pricingInfos", [{}])[0].get("monthlyCondoFee", 0)) if listing.get("pricingInfos") else 0.0,
-                "iptu": float(listing.get("pricingInfos", [{}])[0].get("yearlyIptu", 0)) if listing.get("pricingInfos") else 0.0,
-                "localizacao": listing.get("address", {}).get("neighborhood", "")
-            }
-            
-            if id_anuncio:
-                dados_extraidos.append(dados_ad)
-    except Exception as e:
-        logging.warning(f"Erro ao deserializar objeto JSON do Zap: {e}")
-        
     return dados_extraidos
 
 def processar_lote_zap(data_lote):
