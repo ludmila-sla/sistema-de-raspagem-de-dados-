@@ -1,37 +1,22 @@
-import json
-from bs4 import BeautifulSoup
+import unicodedata
+import re
 
-def extract_listings(html_content):
+def normalizar_slug_vivareal(cidade: str) -> str:
     """
-    Varre o HTML bruto do VivaReal procurando blocos <script type="application/ld+json">
-    e filtra apenas os nós do tipo 'Product'.
+    Remove acentos, caracteres especiais e substitui espaços por hifens.
+    Exemplo: "São José dos Campos" -> "sao-jose-dos-campos"
     """
-    try:
-        soup = BeautifulSoup(html_content, 'html.parser')
-        scripts = soup.find_all('script', type='application/ld+json')
-        extracted_data = []
-        
-        for script in scripts:
-            if not script.string:
-                continue
-            try:
-                content = json.loads(script.string)
+    cidade_norm = unicodedata.normalize('NFKD', cidade)
+    cidade_norm = "".join([c for c in cidade_norm if not unicodedata.combining(c)])
+    cidade_norm = cidade_norm.lower().strip()
+    cidade_norm = re.sub(r'[^a-z0-9\s-]', '', cidade_norm)
+    cidade_norm = re.sub(r'[\s-]+', '-', cidade_norm)
+    return cidade_norm
 
-                if content.get("@type") == "Product":
-                    extracted_data.append({
-                        "provider": "VivaReal",
-                        "title": content.get("name", "").strip(),
-                        "description": content.get("description", "").strip(),
-                        "sku": content.get("sku", ""),
-                        "images": content.get("image", []),
-                        "price": content.get("offers", {}).get("price", None),
-                        "currency": content.get("offers", {}).get("priceCurrency", ""),
-                        "url": content.get("offers", {}).get("url", "")
-                    })
-            except json.JSONDecodeError:
-                continue
-                
-        return extracted_data
-        
-    except Exception as e:
-        return {"error": f"Erro ao processar HTML do VivaReal: {str(e)}"}
+def gerar_url_vivareal(cidade: str, tipo_contrato: str = "aluguel", tipo_imovel: str = "apartamento_residencial") -> str:
+    """
+    Gera a URL padrão de busca do VivaReal com base nos parâmetros.
+    """
+    slug_cidade = normalizar_slug_vivareal(cidade)
+
+    return f"https://www.vivareal.com.br/{tipo_contrato}/sp/{slug_cidade}/{tipo_imovel}/"
