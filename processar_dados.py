@@ -299,11 +299,10 @@ def processar_html_imovelweb(html_content, municipio):
                         "localizacao": item.get("contentLocation", {}).get("name", municipio).strip()
                     }
                     
-                    # Captura o padrão R$ XXX.XXX-XX ou R$ XXX.XXX,XX
-                    match_preco = re.search(r'(?:R\$\s*)([0-9.,-]+)', descricao)
+                    match_preco = re.search(r'R\$\s*-?\s*([0-9.,-]+)', descricao, re.IGNORECASE)
                     if match_preco:
                         preco_bruto = match_preco.group(1)
-                        preco_corrigido = preco_bruto.replace('-', ',')
+                        preco_corrigido = preco_bruto.lstrip('-').replace('-', ',')
                         dados_ad["preco_total"] = tratar_valor_numerico("preco_total", preco_corrigido)
                         
                     match_area = re.search(r'([0-9.,]+)\s*(?:m²|m|metros)', descricao, re.IGNORECASE)
