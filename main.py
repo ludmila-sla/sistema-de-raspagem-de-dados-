@@ -4,6 +4,7 @@ from config.sites import SITES
 from scrapers.olx import executar_scraping_olx
 from scrapers.zap import executar_scraping_zap
 from scrapers.vivareal import executar_scraping_vivareal 
+from scrapers.imovelweb import executar_scraping_imovelweb
 
 sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
 
@@ -31,11 +32,17 @@ def main():
     else:
         print("[-] Scraper ZAP: Inativo")
 
-    if SITES.get("vivareal"):  # <--- Bloco adicionado
+    if SITES.get("vivareal"):
         print("[*] Scraper VivaReal: Ativo")
         executar_scraping_vivareal(APS)
     else:
         print("[-] Scraper VivaReal: Inativo")
+
+    if SITES.get("imovelweb"):  # Bloco adicionado para o Imovelweb
+        print("[*] Scraper Imovelweb: Ativo")
+        executar_scraping_imovelweb(APS)
+    else:
+        print("[-] Scraper Imovelweb: Inativo")
 
 if __name__ == "__main__":
     main()
