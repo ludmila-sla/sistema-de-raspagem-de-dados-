@@ -47,14 +47,13 @@ class TestPipelineImovelweb(unittest.TestCase):
         
         self.assertEqual(len(dados_processados), 1)
         anuncio = dados_processados[0]
-        
-        # Teste do Hash MD5 real gerado pela URL
+  
         self.assertEqual(anuncio["id_anuncio"], "2432ec80b09c7cecc54f9bafcf39bf94")
         self.assertEqual(anuncio["municipio"], "Bauru")
         self.assertEqual(anuncio["titulo"], "ZUCCARO IMOVEIS")
         self.assertEqual(anuncio["localizacao"], "Núcleo Residencial Beija-Flor")
         
-        # O parser deve normalizar internamente e retornar o float correto
+
         self.assertEqual(anuncio["preco_total"], 189990.0)
         self.assertEqual(anuncio["area"], 110.0)
 
