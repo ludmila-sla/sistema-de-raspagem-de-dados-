@@ -25,7 +25,10 @@ def main():
         print("[-] Scraper OLX: Inativo")
         
     if SITES.get("zap"):
-        pass
+        print("[*] Scraper ZAP: Ativo")
+        executar_scraping_zap(APS)
+    else:
+        print("[-] Scraper ZAP: Inativo")
 
 if __name__ == "__main__":
     main()
