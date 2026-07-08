@@ -110,9 +110,6 @@ def processar_lote_olx(data_lote):
         print(f"[-] ERRO CRÍTICO: O processamento falhou. Nada foi salvo. Verifique os arquivos de log.")
         
 def processar_html_zap(html_content, municipio):
-    """
-    Extrai anúncios do Zap Imóveis varrendo as tags LD+JSON (Schema.org) do HTML.
-    """
     dados_extraidos = []
     soup = BeautifulSoup(html_content, "html.parser")
     
@@ -192,9 +189,6 @@ def processar_lote_zap(data_lote):
     print(f"[+] Lote Zap {data_lote} salvo com sucesso em: {arquivo_saida}")
     
 def processar_html_vivareal(html_content, municipio):
-    """
-    Extrai anúncios de terrenos do VivaReal varrendo as tags LD+JSON (Schema.org) do HTML.
-    """
     dados_extraidos = []
     soup = BeautifulSoup(html_content, "html.parser")
     scripts = soup.find_all("script", type="application/ld+json")
@@ -264,6 +258,103 @@ def processar_lote_vivareal(data_lote):
         
     print(f"[+] Lote VivaReal {data_lote} salvo com sucesso em: {arquivo_saida}")
     
+def processar_html_imovelweb(html_content, municipio):
+
+    dados_extraidos = []
+    soup = BeautifulSoup(html_content, "html.parser")
+    scripts = soup.find_all("script", type="application/ld+json")
+    
+    for script in scripts:
+        if not script.string:
+            continue
+        try:
+            payload = json.loads(script.string)
+
+            if isinstance(payload, dict) and "mainEntity" in payload:
+                listings = payload["mainEntity"]
+            elif isinstance(payload, list):
+                listings = payload
+            else:
+                listings = [payload]
+
+            for item in listings:
+                if isinstance(item, dict) and item.get("type") == "RealEstateListing":
+                    url_completa = item.get("url", "").strip()
+                    
+                    id_anuncio = None
+                    if url_completa:
+                        id_anuncio = hashlib.md5(url_completa.encode('utf-8')).hexdigest()
+
+                    descricao = item.get("description", "")
+                    
+                    dados_ad = {
+                        "id_anuncio": id_anuncio,
+                        "municipio": municipio,
+                        "titulo": item.get("name"),
+                        "url": url_completa,
+                        "area": None,         
+                        "preco_total": None,
+                        "condominio": 0.0,
+                        "iptu": 0.0, 
+                        "localizacao": item.get("contentLocation", {}).get("name", municipio)
+                    }
+                    
+                    match_preco = re.search(r'(?:R\$\s*)([0-9.,]+)', descricao)
+                    if match_preco:
+                        dados_ad["preco_total"] = tratar_valor_numerico("preco_total", match_preco.group(1))
+                        
+                    match_area = re.search(r'([0-9.,]+)\s*(?:m²|m|metros)', descricao, re.IGNORECASE)
+                    if match_area:
+                        dados_ad["area"] = tratar_valor_numerico("area", match_area.group(1))
+
+                    match_condo = re.search(r'(?:condominio|condomínio)[:\s]*R\$\s*([0-9.,]+)', descricao, re.IGNORECASE)
+                    if match_condo:
+                        dados_ad["condominio"] = tratar_valor_numerico("condominio", match_condo.group(1))
+
+                    match_iptu = re.search(r'(?:iptu)[:\s]*R\$\s*([0-9.,]+)', descricao, re.IGNORECASE)
+                    if match_iptu:
+                        dados_ad["iptu"] = tratar_valor_numerico("iptu", match_iptu.group(1))
+
+                    if id_anuncio:
+                        dados_extraidos.append(dados_ad)
+                        
+        except Exception as e:
+            logging.warning(f"Erro ao fazer o parse do JSON LD do Imovelweb: {e}")
+            
+    return dados_extraidos
+
+
+def processar_lote_imovelweb(data_lote):
+
+    pasta_raw = os.path.join("data", "raw", "imovelweb", data_lote)
+    pasta_processed = os.path.join("data", "processed")
+    os.makedirs(pasta_processed, exist_ok=True)
+    
+    if not os.path.exists(pasta_raw):
+        print(f"[-] Pasta de dados brutos Imovelweb para a data {data_lote} não encontrada.")
+        return
+
+    arquivos_html = [f for f in os.listdir(pasta_raw) if f.endswith(".html")]
+    dados_processados_lote = []
+
+    print(f"[*] Iniciando processamento de {len(arquivos_html)} arquivos do Imovelweb...")
+
+    for arquivo in arquivos_html:
+        municipio_nome = arquivo.replace(".html", "").capitalize()
+        caminho_arquivo = os.path.join(pasta_raw, arquivo)
+        
+        with open(caminho_arquivo, "r", encoding="utf-8") as f:
+            html_content = f.read()
+            
+        anuncios_arquivo = processar_html_imovelweb(html_content, municipio_nome)
+        dados_processados_lote.extend(anuncios_arquivo)
+        
+    arquivo_saida = os.path.join(pasta_processed, f"imovelweb_dados_{data_lote}.json")
+    with open(arquivo_saida, "w", encoding="utf-8") as f:
+        json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
+        
+    print(f"[+] Lote Imovelweb {data_lote} salvo com sucesso em: {arquivo_saida}")
+    
 if __name__ == "__main__":
     data_alvo = input("Digite a data do lote para processar (AAAA-MM-DD) ou pressione Enter para hoje: ")
     if not data_alvo:
@@ -272,4 +363,5 @@ if __name__ == "__main__":
     processar_lote_olx(data_alvo)
     processar_lote_zap(data_alvo)
     processar_lote_vivareal(data_alvo)
+    processar_lote_imovelweb(data_alvo)
 
