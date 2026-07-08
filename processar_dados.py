@@ -190,7 +190,83 @@ def processar_lote_zap(data_lote):
         json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
         
     print(f"[+] Lote Zap {data_lote} salvo com sucesso em: {arquivo_saida}")
+def processar_html_vivareal(html_content, municipio):
+    """
+    Extrai anúncios do VivaReal varrendo as tags LD+JSON (Schema.org) do HTML,
+    filtrando nós do tipo 'Product'.
+    """
+    dados_extraidos = []
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    scripts = soup.find_all("script", type="application/ld+json")
+    
+    for script in scripts:
+        if not script.string:
+            continue
+        try:
+            payload = json.loads(script.string)
 
+            if payload.get("@type") == "Product":
+                offers = payload.get("offers", {})
+                url_completa = offers.get("url", "")
+                
+                id_anuncio = None
+                if url_completa:
+                    id_anuncio = hashlib.md5(url_completa.strip().encode('utf-8')).hexdigest()
+                
+                # O payload do VivaReal não traz a área explicitamente no Product estruturado,
+                # mas mantemos a chave como None para consistência com o pipeline.
+                dados_ad = {
+                    "id_anuncio": id_anuncio,
+                    "municipio": municipio,
+                    "titulo": payload.get("name"),
+                    "url": url_completa,
+                    "area": None,
+                    "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
+                    "condominio": 0.0,  # Valores adicionais vêm em outros nós ou no HTML cru
+                    "iptu": 0.0, 
+                    "localizacao": municipio  # Ajustado conforme escopo do arquivo local
+                }
+                
+                if id_anuncio:
+                    dados_extraidos.append(dados_ad)
+                    
+        except Exception as e:
+            logging.warning(f"Erro ao fazer o parse do JSON LD do VivaReal: {e}")
+            
+    return dados_extraidos
+
+
+def processar_lote_vivareal(data_lote):
+    pasta_raw = os.path.join("data", "raw", "vivareal", data_lote)
+    pasta_processed = os.path.join("data", "processed")
+    os.makedirs(pasta_processed, exist_ok=True)
+    
+    if not os.path.exists(pasta_raw):
+        print(f"[-] Pasta de dados brutos VivaReal para a data {data_lote} não encontrada.")
+        return
+
+    arquivos_html = [f for f in os.listdir(pasta_raw) if f.endswith(".html")]
+    dados_processados_lote = []
+
+    print(f"[*] Iniciando processamento de {len(arquivos_html)} arquivos do VivaReal...")
+
+    for arquivo in arquivos_html:
+        municipio_nome = arquivo.replace(".html", "").capitalize()
+        caminho_arquivo = os.path.join(pasta_raw, arquivo)
+        
+        with open(caminho_arquivo, "r", encoding="utf-8") as f:
+            html_content = f.read()
+            
+        anuncios_arquivo = processar_html_vivareal(html_content, municipio_nome)
+        dados_processados_lote.extend(anuncios_arquivo)
+        
+    arquivo_saida = os.path.join(pasta_processed, f"vivareal_dados_{data_lote}.json")
+    with open(arquivo_saida, "w", encoding="utf-8") as f:
+        json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
+        
+    print(f"[+] Lote VivaReal {data_lote} salvo com sucesso em: {arquivo_saida}")
+    
 if __name__ == "__main__":
     data_alvo = input("Digite a data do lote para processar (AAAA-MM-DD) ou pressione Enter para hoje: ")
     if not data_alvo:
@@ -198,9 +274,5 @@ if __name__ == "__main__":
 
     processar_lote_olx(data_alvo)
     processar_lote_zap(data_alvo)
+    processar_lote_vivareal(data_alvo)
 
-if __name__ == "__main__":
-    data_alvo = input("Digite a data do lote para processar (AAAA-MM-DD) ou pressione Enter para hoje: ")
-    if not data_alvo:
-        data_alvo = datetime.now().strftime("%Y-%m-%d")
-    processar_lote_olx(data_alvo)
