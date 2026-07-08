@@ -190,14 +190,13 @@ def processar_lote_zap(data_lote):
         json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
         
     print(f"[+] Lote Zap {data_lote} salvo com sucesso em: {arquivo_saida}")
+    
 def processar_html_vivareal(html_content, municipio):
     """
-    Extrai anúncios do VivaReal varrendo as tags LD+JSON (Schema.org) do HTML,
-    filtrando nós do tipo 'Product'.
+    Extrai anúncios de terrenos do VivaReal varrendo as tags LD+JSON (Schema.org) do HTML.
     """
     dados_extraidos = []
     soup = BeautifulSoup(html_content, "html.parser")
-    
     scripts = soup.find_all("script", type="application/ld+json")
     
     for script in scripts:
@@ -214,18 +213,16 @@ def processar_html_vivareal(html_content, municipio):
                 if url_completa:
                     id_anuncio = hashlib.md5(url_completa.strip().encode('utf-8')).hexdigest()
                 
-                # O payload do VivaReal não traz a área explicitamente no Product estruturado,
-                # mas mantemos a chave como None para consistência com o pipeline.
                 dados_ad = {
                     "id_anuncio": id_anuncio,
                     "municipio": municipio,
                     "titulo": payload.get("name"),
                     "url": url_completa,
-                    "area": None,
+                    "area": float(payload.get("floorSize", {}).get("value", 0)) if payload.get("floorSize") else None,
                     "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
-                    "condominio": 0.0,  # Valores adicionais vêm em outros nós ou no HTML cru
+                    "condominio": 0.0,
                     "iptu": 0.0, 
-                    "localizacao": municipio  # Ajustado conforme escopo do arquivo local
+                    "localizacao": municipio
                 }
                 
                 if id_anuncio:
