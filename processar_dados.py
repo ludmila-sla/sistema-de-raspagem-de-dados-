@@ -23,7 +23,7 @@ def extrair_anuncio_olx(elemento_ad, municipio):
         id_anuncio = hashlib.md5(href.strip().encode('utf-8')).hexdigest()
     
     dados_anuncio = {
-        "id_anuncio": id_anuncio, # Ajustado: Garante o uso do ID gerado
+        "id_anuncio": id_anuncio,
         "municipio": municipio,
         "titulo": link_element.get_text().strip() if link_element else None,
         "url": href,
@@ -57,7 +57,6 @@ def processar_lote_olx(data_lote):
     pasta_raw = os.path.join("data", "raw", "olx", data_lote)
     pasta_processed = os.path.join("data", "processed")
     
-    # Proteção caso exista um arquivo obstruindo o diretório
     if os.path.exists(pasta_processed) and not os.path.isdir(pasta_processed):
         os.remove(pasta_processed)
     os.makedirs(pasta_processed, exist_ok=True)
@@ -103,6 +102,86 @@ def processar_lote_olx(data_lote):
     except Exception as e:
         logging.exception(f"Falha crítica no processamento do lote {data_lote}. Operação abortada.")
         print(f"[-] ERRO CRÍTICO: O processamento falhou. Nada foi salvo. Verifique os arquivos de log.")
+def processar_html_zap(html_content, municipio):
+    """
+    Extrai anúncios do Zap Imóveis varrendo o objeto JSON interno do NextJS.
+    """
+    dados_extraidos = []
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    script_tag = soup.find("script", id="__NEXT_DATA__")
+    if not script_tag:
+        return dados_extraidos
+
+    try:
+        payload = json.loads(script_tag.string)
+        listings = payload.get("props", {}).get("pageProps", {}).get("results", {}).get("listings", [])
+        
+        for item in listings:
+            listing = item.get("listing", {})
+            link_relativo = listing.get("url", "")
+            url_completa = f"https://www.zapimoveis.com.br{link_relativo}" if link_relativo else ""
+            
+            id_anuncio = None
+            if url_completa:
+                id_anuncio = hashlib.md5(url_completa.strip().encode('utf-8')).hexdigest()
+            
+            dados_ad = {
+                "id_anuncio": id_anuncio,
+                "municipio": municipio,
+                "titulo": listing.get("title"),
+                "url": url_completa,
+                "area": float(listing.get("usableAreas", [0])[0]) if listing.get("usableAreas") else None,
+                "preco_total": float(listing.get("pricingInfos", [{}])[0].get("price", 0)) if listing.get("pricingInfos") else None,
+                "condominio": float(listing.get("pricingInfos", [{}])[0].get("monthlyCondoFee", 0)) if listing.get("pricingInfos") else 0.0,
+                "iptu": float(listing.get("pricingInfos", [{}])[0].get("yearlyIptu", 0)) if listing.get("pricingInfos") else 0.0,
+                "localizacao": listing.get("address", {}).get("neighborhood", "")
+            }
+            
+            if id_anuncio:
+                dados_extraidos.append(dados_ad)
+    except Exception as e:
+        logging.warning(f"Erro ao deserializar objeto JSON do Zap: {e}")
+        
+    return dados_extraidos
+
+def processar_lote_zap(data_lote):
+    pasta_raw = os.path.join("data", "raw", "zap", data_lote)
+    pasta_processed = os.path.join("data", "processed")
+    os.makedirs(pasta_processed, exist_ok=True)
+    
+    if not os.path.exists(pasta_raw):
+        print(f"[-] Pasta de dados brutos Zap para a data {data_lote} não encontrada.")
+        return
+
+    arquivos_html = [f for f in os.listdir(pasta_raw) if f.endswith(".html")]
+    dados_processados_lote = []
+
+    print(f"[*] Iniciando processamento de {len(arquivos_html)} arquivos do Zap...")
+
+    for arquivo in arquivos_html:
+        municipio_nome = arquivo.replace(".html", "").capitalize()
+        caminho_arquivo = os.path.join(pasta_raw, arquivo)
+        
+        with open(caminho_arquivo, "r", encoding="utf-8") as f:
+            html_content = f.read()
+            
+        anuncios_arquivo = processar_html_zap(html_content, municipio_nome)
+        dados_processados_lote.extend(anuncios_arquivo)
+        
+    arquivo_saida = os.path.join(pasta_processed, f"zap_dados_{data_lote}.json")
+    with open(arquivo_saida, "w", encoding="utf-8") as f:
+        json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
+        
+    print(f"[+] Lote Zap {data_lote} salvo com sucesso em: {arquivo_saida}")
+
+if __name__ == "__main__":
+    data_alvo = input("Digite a data do lote para processar (AAAA-MM-DD) ou pressione Enter para hoje: ")
+    if not data_alvo:
+        data_alvo = datetime.now().strftime("%Y-%m-%d")
+
+    processar_lote_olx(data_alvo)
+    processar_lote_zap(data_alvo)
 
 if __name__ == "__main__":
     data_alvo = input("Digite a data do lote para processar (AAAA-MM-DD) ou pressione Enter para hoje: ")
