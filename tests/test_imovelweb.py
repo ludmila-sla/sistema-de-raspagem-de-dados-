@@ -39,14 +39,12 @@ class TestPipelineImovelweb(unittest.TestCase):
         """
 
     def test_normalizador_valores_numericos_imovelweb(self):
-        """Garante a higienização correta dos dados via RegExp rodando na utilidade do sistema."""
 
         self.assertEqual(tratar_valor_numerico("preco_total", "189.990-00"), 189990.0)
         self.assertEqual(tratar_valor_numerico("area", "110"), 110.0)
         self.assertEqual(tratar_valor_numerico("condominio", "0.0"), 0.0)
 
     def test_extraicao_completa_anuncio_imovelweb(self):
-        """Valida o mapeamento do dicionário final gerado a partir do Schema JSON-LD bruto."""
         dados_processados = processar_html_imovelweb(self.html_exemplo, "Bauru")
         
 
