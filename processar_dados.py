@@ -2,6 +2,7 @@ import os
 import hashlib
 import json
 import logging
+import re
 from bs4 import BeautifulSoup
 from datetime import datetime
 from utils.normalizador import mapear_campo_sistema, tratar_valor_numerico
@@ -38,9 +39,14 @@ def extrair_anuncio_olx(elemento_ad, municipio):
     if preco_element:
         dados_anuncio["preco_total"] = tratar_valor_numerico("preco_total", preco_element.get_text())
         
+
     localizacao_element = elemento_ad.select_one("[class*='olx-adcard__location']")
     if localizacao_element:
-        dados_anuncio["localizacao"] = localizacao_element.get_text().strip()
+        texto_localizacao = localizacao_element.get_text().strip()
+
+        texto_limpo = re.sub(r'(Hoje|Ontem|\d{1,2}\s+[A-Za-z]{3}),\s+\d{2}:\d{2}\s*$', '', texto_localizacao)
+        
+        dados_anuncio["localizacao"] = texto_limpo.strip().rstrip(',')
         
     detalhes = elemento_ad.select("[class*='olx-adcard__detail']") 
     for detalhe in detalhes:
