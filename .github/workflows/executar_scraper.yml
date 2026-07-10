@@ -1,6 +1,8 @@
 name: Executar Scraping e Processamento Real
 
 on:
+  schedule:
+    - cron: '0 16 17 * *'
   workflow_dispatch:
 
 jobs:
