@@ -217,8 +217,6 @@ def processar_html_vivareal(html_content, municipio):
                     "url": url_completa,
                     "area": float(payload.get("floorSize", {}).get("value", 0)) if payload.get("floorSize") else None,
                     "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
-                    "condominio": 0.0,
-                    "iptu": 0.0, 
                     "localizacao": item.get("contentLocation", {}).get("name", municipio).strip()
                 }
                 
@@ -312,16 +310,6 @@ def processar_html_imovelweb(html_content, municipio):
                     match_area = re.search(r'([0-9.,]+)\s*(?:m²|m|metros)', descricao, re.IGNORECASE)
                     if match_area:
                         dados_ad["area"] = tratar_valor_numerico("area", match_area.group(1))
-
-                    match_condo = re.search(r'(?:condominio|condomínio)[:\s]*R\$\s*([0-9.,-]+)', descricao, re.IGNORECASE)
-                    if match_condo:
-                        condo_corrigido = match_condo.group(1).replace('-', ',')
-                        dados_ad["condominio"] = tratar_valor_numerico("condominio", condo_corrigido)
-
-                    match_iptu = re.search(r'(?:iptu)[:\s]*R\$\s*([0-9.,-]+)', descricao, re.IGNORECASE)
-                    if match_iptu:
-                        iptu_corrigido = match_iptu.group(1).replace('-', ',')
-                        dados_ad["iptu"] = tratar_valor_numerico("iptu", iptu_corrigido)
 
                     if id_anuncio:
                         dados_extraidos.append(dados_ad)
