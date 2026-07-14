@@ -25,6 +25,7 @@ jobs:
     - name: Executar Scraper
       env:
         SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
       run: |
         python main.py
 
