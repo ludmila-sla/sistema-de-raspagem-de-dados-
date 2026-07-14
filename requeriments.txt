@@ -6,5 +6,5 @@ charset-normalizer==3.3.2
 idna==3.7
 urllib3==2.2.2
 soupsieve==2.5
-SQLAlchemy
+sqlalchemy>=2.0
 psycopg2-binary
