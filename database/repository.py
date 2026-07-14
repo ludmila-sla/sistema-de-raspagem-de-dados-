@@ -1,52 +1,97 @@
+import hashlib
+from datetime import datetime
+
 from sqlalchemy.orm import Session
 from sqlalchemy import select
+
 from .connection import engine
-from .models import *
-import hashlib
+from .models import Anuncio
 
-def gerar_grupo_duplicado(anuncio):
+
+def gerar_hash_conteudo(anuncio):
     texto = (
-        f"{anuncio['cidade']}"
-        f"{anuncio['endereco']}"
-        f"{anuncio['area']}"
-        f"{anuncio['preco_total']}"
+        f"{anuncio.get('municipio', '')}"
+        f"{anuncio.get('localizacao', '')}"
+        f"{anuncio.get('area', '')}"
+        f"{anuncio.get('preco_total', '')}"
+        f"{anuncio.get('tipo_imovel', '')}"
     )
 
-    return hashlib.sha256(
-        texto.encode()
-    ).hexdigest()
+    return hashlib.sha256(texto.encode()).hexdigest()
 
-def salvar_anuncios(lista):
-  with Session(engine) as session:
 
-    for anuncio in lista:
-      if anuncio["area"] and anuncio["preco_total"]:
-        anuncio["preco_m2"] = (
-        anuncio["preco_total"] / anuncio["area"]
-    )
-      else:
-        anuncio["preco_m2"] = None
-        
-      anuncio["grupo_duplicado"] = gerar_grupo_duplicado(anuncio)
-      registro = Anuncio(
-        id_anuncio=anuncio["id_anuncio"],
-        data_busca=anuncio["data_busca"],
-        endereco=anuncio["endereco"],
-        area=anuncio["area"],
-        preco_total=anuncio["preco_total"],
-        preco_m2=anuncio["preco_m2"],
-        tipo_imovel=anuncio["tipo_imovel"],
-        site=anuncio["site"],
-        cidade=anuncio["cidade"],
-        grupo_duplicado=anuncio["grupo_duplicado"])
+def detectar_tipo_imovel(titulo):
+    if not titulo:
+        return None
 
-      ja_existe = session.scalar(
-        select(Anuncio).where(
-          Anuncio.id_anuncio == anuncio["id_anuncio"]
-    )
-)
-      if ja_existe:
-        continue
-      session.add(registro)
-      
-session.commit()
+    titulo = titulo.lower()
+
+    if "terreno" in titulo:
+        return "Terreno"
+
+    if "loteamento" in titulo:
+        return "Lote"
+
+    if "lote" in titulo:
+        return "Lote"
+
+    return None
+
+
+def salvar_anuncios(lista, site):
+
+    with Session(engine) as session:
+
+        for anuncio in lista:
+
+            area = anuncio.get("area")
+            preco = anuncio.get("preco_total")
+
+            if (
+                area is not None
+                and preco is not None
+                and area > 0
+            ):
+                preco_m2 = preco / area
+            else:
+                preco_m2 = None
+
+            hash_conteudo = gerar_hash_conteudo(anuncio)
+
+            registro = Anuncio(
+
+                id_anuncio=anuncio.get("id_anuncio"),
+
+                data_busca=datetime.now().date(),
+
+                endereco=anuncio.get("localizacao"),
+
+                area=area,
+
+                preco_total=preco,
+
+                preco_m2=preco_m2,
+
+                tipo_imovel=detectar_tipo_imovel(
+                    anuncio.get("titulo")
+                ),
+
+                site=site,
+
+                cidade=anuncio.get("municipio"),
+
+                hash_conteudo=hash_conteudo
+            )
+
+            ja_existe = session.scalar(
+                select(Anuncio).where(
+                    Anuncio.id_anuncio == registro.id_anuncio
+                )
+            )
+
+            if ja_existe:
+                continue
+
+            session.add(registro)
+
+        session.commit()
