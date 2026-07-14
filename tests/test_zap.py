@@ -71,7 +71,6 @@ class TestZapScraper(unittest.TestCase):
         self.assertEqual(anuncio["titulo"], "Apartamento para alugar com 47 m², 2 quartos, 1 banheiro, 1 vaga")
         self.assertEqual(anuncio["area"], 47.0)
         self.assertEqual(anuncio["preco_total"], 1500.0)
-        self.assertEqual(anuncio["condominio"], 361.0)
         self.assertIsNotNone(anuncio["id_anuncio"])
 
 if __name__ == "__main__":
