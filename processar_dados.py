@@ -31,8 +31,6 @@ def extrair_anuncio_olx(elemento_ad, municipio):
         "url": href,
         "area": None,
         "preco_total": None,
-        "condominio": 0.0,
-        "iptu": 0.0,
         "localizacao": None
     }
     
@@ -147,8 +145,6 @@ def processar_html_zap(html_content, municipio):
                         "url": url_completa,
                         "area": float(item.get("floorSize", {}).get("value", 0)) if item.get("floorSize") else None,
                         "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
-                        "condominio": float(condo_value),
-                        "iptu": 0.0, 
                         "localizacao": item.get("address", {}).get("addressLocality", "")
                     }
                     
@@ -223,7 +219,7 @@ def processar_html_vivareal(html_content, municipio):
                     "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
                     "condominio": 0.0,
                     "iptu": 0.0, 
-                    "localizacao": municipio
+                    "localizacao": item.get("contentLocation", {}).get("name", municipio).strip()
                 }
                 
                 if id_anuncio:
@@ -304,8 +300,6 @@ def processar_html_imovelweb(html_content, municipio):
                         "url": url_completa,
                         "area": None,         
                         "preco_total": None,
-                        "condominio": 0.0,
-                        "iptu": 0.0, 
                         "localizacao": item.get("contentLocation", {}).get("name", municipio).strip()
                     }
                     
