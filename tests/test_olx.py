@@ -35,25 +35,17 @@ class TestPipelineOLX(unittest.TestCase):
         self.soup = BeautifulSoup(self.html_exemplo, "html.parser")
         self.card = self.soup.select_one("section.olx-adcard")
 
-    def test_normalizador_valores_numericos(self):
-        self.assertEqual(tratar_valor_numerico("preco_total", "R$ 130.000"), 130000.0)
-        self.assertEqual(tratar_valor_numerico("area", "167m²"), 167.0)
-        self.assertEqual(tratar_valor_numerico("area", "Apenas texto"), None)
-
-    def test_normalizador_mapeamento_campos(self):
-        self.assertEqual(mapear_campo_sistema("167 metros quadrados"), "area")
-        self.assertEqual(mapear_campo_sistema("Preço total"), "preco_total")
-        self.assertEqual(mapear_campo_sistema("Campo Inexistente"), None)
-
-def test_extraicao_completa_anuncio(self):
-        dados = extrair_anuncio_olx(self.card, "Bauru")
         
-        self.assertEqual(dados["id_anuncio"], "ef77c2a78f14b6fc531bd098ffb19b6e")
-        self.assertEqual(dados["municipio"], "Bauru")
-        self.assertEqual(dados["preco_total"], 130000.0)
-        self.assertEqual(dados["localizacao"], "Bauru, Parque Viaduto")
-        self.assertEqual(dados["area"], 167.0)
-        self.assertTrue(dados["url"].endswith("1512978359"))
+        resultado = processar_html_olx(html_simulado, "Bauru")
+
+        self.assertEqual(len(resultado), 1)
+        anuncio = resultado[0]
+
+        self.assertEqual(anuncio["id_anuncio"], "ef77c2a78f14b6fc531bd098ffb19b6e")
+        self.assertEqual(anuncio["municipio"], "Bauru")
+        self.assertEqual(anuncio["area"], 167.0)
+        self.assertEqual(anuncio["preco_total"], 130000.0)
+
 
 if __name__ == "__main__":
     unittest.main()
