@@ -32,3 +32,17 @@ class Anuncio(Base):
     grupo_duplicado = Column(String)
 
     criado_em = Column(DateTime, server_default=func.now())
+    
+class Log(Base):
+
+    __tablename__ = "logs"
+
+    id = Column(Integer, primary_key=True)
+
+    data = Column(DateTime, server_default=func.now())
+
+    modulo = Column(String)
+
+    nivel = Column(String)
+
+    mensagem = Column(Text)
