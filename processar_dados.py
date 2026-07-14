@@ -103,7 +103,9 @@ def processar_lote_olx(data_lote):
         
         with open(arquivo_saida, "w", encoding="utf-8") as f:
             json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
-            salvar_anuncios(dados_processados_lote)
+            salvar_anuncios(
+                dados_processados_lote,
+                "olx")
             
         print(f"[+] Lote {data_lote} processado e saved em: {arquivo_saida}")
 
@@ -187,7 +189,9 @@ def processar_lote_zap(data_lote):
     arquivo_saida = os.path.join(pasta_processed, f"zap_dados_{data_lote}.json")
     with open(arquivo_saida, "w", encoding="utf-8") as f:
         json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
-        salvar_anuncios(dados_processados_lote)
+        salvar_anuncios(
+            dados_processados_lote,
+            "zap")
         
     print(f"[+] Lote Zap {data_lote} salvo com sucesso em: {arquivo_saida}")
     
@@ -258,7 +262,9 @@ def processar_lote_vivareal(data_lote):
     arquivo_saida = os.path.join(pasta_processed, f"vivareal_dados_{data_lote}.json")
     with open(arquivo_saida, "w", encoding="utf-8") as f:
         json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
-        salvar_anuncios(dados_processados_lote)
+        salvar_anuncios(
+            dados_processados_lote,
+            "vivareal")
         
     print(f"[+] Lote VivaReal {data_lote} salvo com sucesso em: {arquivo_saida}")
     
@@ -360,7 +366,9 @@ def processar_lote_imovelweb(data_lote):
     arquivo_saida = os.path.join(pasta_processed, f"imovelweb_dados_{data_lote}.json")
     with open(arquivo_saida, "w", encoding="utf-8") as f:
         json.dump(dados_processados_lote, f, indent=4, ensure_ascii=False)
-        salvar_anuncios(dados_processados_lote)
+        salvar_anuncios(
+            dados_processados_lote,
+            "imovelweb")
         
     print(f"[+] Lote Imovelweb {data_lote} salvo com sucesso em: {arquivo_saida}")
     
