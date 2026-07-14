@@ -29,7 +29,7 @@ class Anuncio(Base):
 
     cidade = Column(String)
 
-    grupo_duplicado = Column(String)
+    hash_conteudo = Column(String)
 
     criado_em = Column(DateTime, server_default=func.now())
     
