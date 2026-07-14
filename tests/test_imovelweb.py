@@ -31,25 +31,19 @@ class TestPipelineImovelweb(unittest.TestCase):
         <body></body>
         </html>
         """
+        resultado = processar_html_imovelweb(html_simulado, "Bauru")
 
-    def test_normalizador_valores_numericos_imovelweb(self):
-        """Testa o utilitário com entrada já higienizada."""
-        self.assertEqual(tratar_valor_numerico("preco_total", "189.990,00"), 189990.0)
-        self.assertEqual(tratar_valor_numerico("area", "110"), 110.0)
-
-    def test_extraicao_completa_anuncio_imovelweb(self):
-        """Valida o ciclo completo do parser corrigindo o hífen em tempo de execução."""
-        dados_processados = processar_html_imovelweb(self.html_exemplo, "Bauru")
+        self.assertEqual(len(resultado), 1)
+        anuncio = resultado[0]
         
-        self.assertEqual(len(dados_processados), 1)
-        anuncio = dados_processados[0]
-        
-        self.assertEqual(anuncio["id_anuncio"], "2432ec80b09c7cecc54f9bafcf39bf94")
         self.assertEqual(anuncio["municipio"], "Bauru")
         self.assertEqual(anuncio["titulo"], "ZUCCARO IMOVEIS")
-
-        self.assertEqual(anuncio["preco_total"], 189990.0)
         self.assertEqual(anuncio["area"], 110.0)
+        self.assertEqual(anuncio["preco_total"], 189990.0)
+        self.assertEqual(anuncio["id_anuncio"], "2432ec80b09c7cecc54f9bafcf39bf94")
+
+
+   
 
 if __name__ == "__main__":
     unittest.main()
