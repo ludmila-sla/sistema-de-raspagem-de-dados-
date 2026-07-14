@@ -7,7 +7,7 @@ from scrapers.vivareal import executar_scraping_vivareal
 from scrapers.imovelweb import executar_scraping_imovelweb
 from database.connection import engine
 from database.models import Base
-#tesfn
+
 Base.metadata.create_all(engine)
 
 sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
