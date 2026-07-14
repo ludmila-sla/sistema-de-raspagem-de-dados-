@@ -35,6 +35,11 @@ jobs:
     - name: Executar Processamento de Dados
       run: |
         python processar_dados.py <<< ""
+    - name: Run tests 
+      env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      run: |
+          python -m unittest discover
 
     - name: Commitar dados diretamente no repositório
       run: |
