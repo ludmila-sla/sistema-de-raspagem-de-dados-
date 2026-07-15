@@ -33,7 +33,7 @@ def executar_scraping_zap(estrutura_aps):
         for municipio in municipios:
             municipio_slug = normalizar_slug_zap(municipio)
 
-            url_busca = f"https://www.zapimoveis.com.br/venda/terrenos/sp+{municipio_slug}/"
+            url_busca = f"https://www.zapimoveis.com.br/venda/terrenos-lotes-condominios/sp+{municipio_slug}/"
             
             logging.info(f"Requisitando Zap: {municipio} -> URL: {url_busca}")
             
