@@ -52,7 +52,7 @@ def executar_scraping_vivareal(estrutura_aps):
                 "url": url_busca,
                 "country_code": "br",
                 "premium_proxy": "true",
-                "render_js": "false"
+                "render_js": "true"
             }
             
             try:
