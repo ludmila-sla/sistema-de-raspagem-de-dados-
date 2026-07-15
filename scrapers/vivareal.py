@@ -33,9 +33,6 @@ def executar_scraping_vivareal(estrutura_aps):
     output_dir = os.path.join("data", "raw", "vivareal", data_atual)
     os.makedirs(output_dir, exist_ok=True)
 
-    print("\n=========================================")
-    print("[*] Iniciando Coleta VivaReal (Terrenos)")
-    print("=========================================")
 
     for microregiao, municipios in estrutura_aps.items():
         print(f"[*] Processando microrregião VivaReal: {microregiao}")
@@ -44,7 +41,6 @@ def executar_scraping_vivareal(estrutura_aps):
             municipio_slug = normalizar_string(municipio)
             url_busca = gerar_url_vivareal(municipio_slug)
             
-            print(f"    [->] Coletando {municipio} via ScrapingBee...")
             logging.info(f"Requisitando VivaReal: {municipio} -> URL: {url_busca}")
             
             params = {
@@ -52,7 +48,7 @@ def executar_scraping_vivareal(estrutura_aps):
                 "url": url_busca,
                 "country_code": "br",
                 "premium_proxy": "true",
-                "render_js": "true"
+                "render_js": "false"
             }
             
             try:
