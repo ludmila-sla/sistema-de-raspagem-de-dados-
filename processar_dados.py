@@ -192,40 +192,87 @@ def processar_lote_zap(data_lote):
     print(f"[+] Lote Zap {data_lote} salvo com sucesso em: {arquivo_saida}")
     
 def processar_html_vivareal(html_content, municipio):
+
     dados_extraidos = []
+
     soup = BeautifulSoup(html_content, "html.parser")
     scripts = soup.find_all("script", type="application/ld+json")
-    
+
     for script in scripts:
+
         if not script.string:
             continue
+
         try:
+
             payload = json.loads(script.string)
 
-            if payload.get("@type") == "Product":
-                offers = payload.get("offers", {})
-                url_completa = offers.get("url", "")
-                
+            produtos = []
+
+            if isinstance(payload, dict):
+
+                if payload.get("@type") == "Product":
+                    produtos = [payload]
+
+                elif payload.get("@type") == "ItemList":
+
+                    for item in payload.get("itemListElement", []):
+
+                        if (
+                            isinstance(item, dict)
+                            and isinstance(item.get("item"), dict)
+                        ):
+                            produtos.append(item["item"])
+
+
+            for produto in produtos:
+
+                url_completa = produto.get("url", "").strip()
+
                 id_anuncio = None
+
                 if url_completa:
-                    id_anuncio = hashlib.md5(url_completa.strip().encode('utf-8')).hexdigest()
-                
+                    id_anuncio = hashlib.md5(
+                        url_completa.encode("utf-8")
+                    ).hexdigest()
+
+                endereco = produto.get("address", {})
+
                 dados_ad = {
+
                     "id_anuncio": id_anuncio,
+
                     "municipio": municipio,
-                    "titulo": payload.get("name"),
+
+                    "titulo": produto.get("name", "").strip(),
+
                     "url": url_completa,
-                    "area": float(payload.get("floorSize", {}).get("value", 0)) if payload.get("floorSize") else None,
-                    "preco_total": float(offers.get("price", 0)) if offers.get("price") else None,
-                    "localizacao": item.get("contentLocation", {}).get("name", municipio).strip()
+
+                    "area": tratar_valor_numerico(
+                        "area",
+                        produto.get("floorSize", {}).get("value")
+                    ),
+
+                    "preco_total": tratar_valor_numerico(
+                        "preco_total",
+                        produto.get("offers", {}).get("price")
+                    ),
+
+                    "localizacao": endereco.get(
+                        "addressLocality",
+                        municipio
+                    ).strip()
+
                 }
-                
+
                 if id_anuncio:
                     dados_extraidos.append(dados_ad)
-                    
+
         except Exception as e:
-            logging.warning(f"Erro ao fazer o parse do JSON LD do VivaReal: {e}")
-            
+            logging.warning(
+                f"Erro ao fazer o parse do JSON LD do VivaReal: {e}"
+            )
+
     return dados_extraidos
 
 
@@ -264,59 +311,81 @@ def processar_lote_vivareal(data_lote):
     
 def processar_html_imovelweb(html_content, municipio):
 
-    dados_extraidos = []
+    from urllib.parse import urljoin
+
+    BASE_URL = "https://www.imovelweb.com.br"
+
     soup = BeautifulSoup(html_content, "html.parser")
-    scripts = soup.find_all("script", type="application/ld+json")
-    
-    for script in scripts:
-        if not script.string:
-            continue
+    dados_extraidos = []
+
+    cards = soup.select('div[data-posting-type="PROPERTY"]')
+
+    print(f"{municipio}: encontrados {len(cards)} anúncios")
+
+    for card in cards:
+
         try:
-            payload = json.loads(script.string)
 
-            if isinstance(payload, dict) and "mainEntity" in payload:
-                listings = payload["mainEntity"]
-            elif isinstance(payload, list):
-                listings = payload
-            else:
-                listings = [payload]
+            id_anuncio = card.get("data-id")
 
-            for item in listings:
-                if isinstance(item, dict) and item.get("type") == "RealEstateListing":
-                    url_completa = item.get("url", "").strip()
-                    
-                    id_anuncio = None
-                    if url_completa:
-                        id_anuncio = hashlib.md5(url_completa.encode('utf-8')).hexdigest()
-                    
-                    descricao = item.get("description", "")
-                    
-                    dados_ad = {
-                        "id_anuncio": id_anuncio,
-                        "municipio": municipio,
-                        "titulo": item.get("name", "").strip(),
-                        "url": url_completa,
-                        "area": None,         
-                        "preco_total": None,
-                        "localizacao": item.get("contentLocation", {}).get("name", municipio).strip()
-                    }
-                    
-                    match_preco = re.search(r'R\$\s*-?\s*([0-9.,-]+)', descricao, re.IGNORECASE)
-                    if match_preco:
-                        preco_bruto = match_preco.group(1)
-                        preco_corrigido = preco_bruto.lstrip('-').replace('-', ',')
-                        dados_ad["preco_total"] = tratar_valor_numerico("preco_total", preco_corrigido)
-                        
-                    match_area = re.search(r'([0-9.,]+)\s*(?:m²|m|metros)', descricao, re.IGNORECASE)
-                    if match_area:
-                        dados_ad["area"] = tratar_valor_numerico("area", match_area.group(1))
+            if not id_anuncio:
+                continue
 
-                    if id_anuncio:
-                        dados_extraidos.append(dados_ad)
-                        
+            url = ""
+            link = card.select_one("a[href]")
+
+            if link:
+                url = urljoin(BASE_URL, link["href"])
+
+            preco_total = None
+            preco_tag = card.select_one('[data-qa="POSTING_CARD_PRICE"]')
+
+            if preco_tag:
+                match = re.search(r'([\d\.]+)', preco_tag.get_text())
+
+                if match:
+                    preco_total = tratar_valor_numerico(
+                        "preco_total",
+                        match.group(1)
+                    )
+
+            area = None
+            area_tag = card.select_one('[data-qa="POSTING_CARD_FEATURES"]')
+
+            if area_tag:
+                match = re.search(r'([\d.,]+)\s*m²', area_tag.get_text())
+
+                if match:
+                    area = tratar_valor_numerico(
+                        "area",
+                        match.group(1)
+                    )
+
+            localizacao = municipio
+            local_tag = card.select_one('[data-qa="POSTING_CARD_LOCATION"]')
+
+            if local_tag:
+                localizacao = local_tag.get_text(strip=True)
+
+            descricao = ""
+            desc_tag = card.select_one('[data-qa="POSTING_CARD_DESCRIPTION"]')
+
+            if desc_tag:
+                descricao = desc_tag.get_text(" ", strip=True)
+
+            dados_extraidos.append({
+                "id_anuncio": id_anuncio,
+                "municipio": municipio,
+                "titulo": descricao,
+                "url": url,
+                "area": area,
+                "preco_total": preco_total,
+                "localizacao": localizacao
+            })
+
         except Exception as e:
-            logging.warning(f"Erro ao fazer o parse do JSON LD do Imovelweb: {e}")
-            
+            logging.exception(e)
+
     return dados_extraidos
 
 
