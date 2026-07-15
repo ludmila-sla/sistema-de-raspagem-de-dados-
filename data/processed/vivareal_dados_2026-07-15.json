@@ -1,1 +1,3170 @@
-[]
+[
+    {
+        "id_anuncio": "7ae3ee747dffbc84188a22ea7fe19682",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 293 m², em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-293m2-venda-RS200000-id-2878412410/",
+        "area": 293.0,
+        "preco_total": 200000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "b53a9a2e4d43a46ae4d7a8fde1deb20b",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 360 m² para comprar em condomínio com portaria 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-360m2-venda-RS363600-id-2849066736/",
+        "area": 360.0,
+        "preco_total": 363600.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "4939d83cdff799af4160464ca20b6f96",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 588 m² para comprar em condomínio com portaria 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-residencial-ecopark-bourbon-cacapava-588m2-venda-RS400000-id-2813879215/",
+        "area": 588.0,
+        "preco_total": 400000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "692724242c528414cea87bfafe420e8e",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 237 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-panorama-cacapava-237m2-venda-RS105000-id-2838668019/",
+        "area": 237.0,
+        "preco_total": 105000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "9ebdb40432ffae3b53c8e10c91dca965",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial para comprar em condomínio fechado com portaria 24h e 325 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-borda-da-mata-cacapava-325m2-venda-RS240000-id-2885627507/",
+        "area": 325.0,
+        "preco_total": 240000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "4bf1b2397674ccc9da48ac6982bebce1",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 319 m² para comprar em condomínio fechado e portaria 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-alta-vista-2-cacapava-319m2-venda-RS267000-id-2882336476/",
+        "area": 319.0,
+        "preco_total": 267000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "96283679491e748cbebc02412dd51044",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 330 m² em condomínio com portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-borda-da-mata-cacapava-330m2-venda-RS245000-id-2865229760/",
+        "area": 330.0,
+        "preco_total": 245000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "a058015f91a0864ae9c4400b6efc963b",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 250 m² em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-colinas-cacapava-250m2-venda-RS245000-id-2794352330/",
+        "area": 250.0,
+        "preco_total": 245000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "e42aeab3c2e3b959b9eeee8a89d47868",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 575 m² para comprar, em condomínio com portaria 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-575m2-venda-RS370000-id-2889545143/",
+        "area": 575.0,
+        "preco_total": 370000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "309c66a6bfa32fd57cdba9e71776dc88",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial em condomínio fechado com 1885 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-terras-de-santa-mariana-cacapava-1885m2-venda-RS350000-id-2866394757/",
+        "area": 1885.0,
+        "preco_total": 350000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "f9cd37af3fcf582a7792848c0641f575",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com portaria 24h e condomínio fechado disponível para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bairro-do-grama-cacapava-326m2-venda-RS310000-id-2849282254/",
+        "area": 326.0,
+        "preco_total": 310000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "d5fa60a319aa21f0e268d221aaed1627",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 360 m² em condomínio com portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-sape-ii-cacapava-360m2-venda-RS253781-id-2838904018/",
+        "area": 360.0,
+        "preco_total": 253781.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "7ffadd676b83f468d443d8b137dd9075",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 360 m² em condomínio com portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-sape-ii-cacapava-360m2-venda-RS253781-id-2838900653/",
+        "area": 360.0,
+        "preco_total": 253781.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "c090476a9ccdd283889bcdcde486907a",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com portaria 24h e condomínio fechado, disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-terras-de-santa-mariana-cacapava-1200m2-venda-RS300000-id-2867880534/",
+        "area": 1200.0,
+        "preco_total": 300000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "a78a08c0a6bc9d2e19a7a653de0eff5b",
+        "municipio": "Cacapava",
+        "titulo": "Lote/Terreno para comprar com 263 m² em  Residencial Alta Vista 1, Caçapava",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-alta-vista-1-cacapava-263m2-venda-RS215000-id-2896147438/",
+        "area": 263.0,
+        "preco_total": 215000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "40511e6d40b3ca6e192b967210f53d62",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 261 m² em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-piedade-cacapava-261m2-venda-RS235000-id-2838670119/",
+        "area": 261.0,
+        "preco_total": 235000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "c77e7ea0d699af82c8d973d5b11ed06f",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 250 m² à venda em condomínio com portaria 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-alta-vista-1-cacapava-250m2-venda-RS210000-id-2838901181/",
+        "area": 250.0,
+        "preco_total": 210000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "86b725b0403ed8ec1c894428a305b6e2",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial para comprar em condomínio com portaria 24h e segurança 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-alta-vista-2-cacapava-319m2-venda-RS267000-id-2846808735/",
+        "area": 319.0,
+        "preco_total": 267000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "b005d666d87a4b7f33f3d4af1d829e28",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 290 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-290m2-venda-RS265000-id-2838904119/",
+        "area": 290.0,
+        "preco_total": 265000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "8d51fee22b78b9d751ee49343d89b625",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 360 m², condomínio fechado e portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-sape-ii-cacapava-360m2-venda-RS260908-id-2838900527/",
+        "area": 360.0,
+        "preco_total": 260908.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "6fd5a91a058197900291014052f92d22",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 319 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-cacapava-velha-cacapava-319m2-venda-RS267000-id-2889514380/",
+        "area": 319.0,
+        "preco_total": 267000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "e20c5ddf57b89052cda2a81794154469",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 175 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-santo-andre-cacapava-175m2-venda-RS106500-id-2895392819/",
+        "area": 175.0,
+        "preco_total": 106500.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "3b5e7f300e05117002a9e4f9eb3ffc09",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 360 m² para comprar em condomínio com portaria 24h em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-360m2-venda-RS363600-id-2849067759/",
+        "area": 360.0,
+        "preco_total": 363600.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "eaae5dc7f6b54b99b0545eacbef74171",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com portaria 24h e condomínio fechado disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-sape-ii-cacapava-360m2-venda-RS290000-id-2877265842/",
+        "area": 360.0,
+        "preco_total": 290000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "6fafdd789639b4868b921301edc01e4f",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 540 m² em condomínio com portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-540m2-venda-RS400000-id-2892615382/",
+        "area": 540.0,
+        "preco_total": 400000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "c783a855f7090a76c14eeb254a4ebc14",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 279 m² em condomínio com piscina e condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-279m2-venda-RS260000-id-2882703273/",
+        "area": 279.0,
+        "preco_total": 260000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "ca91611771be4f59880cc91cc461ad8d",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial com 293 m² em condomínio com piscina e áreas fechadas para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-maria-elmira-cacapava-293m2-venda-RS200000-id-2878413984/",
+        "area": 293.0,
+        "preco_total": 200000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "4982ceda14de509732b381f063880d5e",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 282 m² em condomínio com piscina e condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-residencial-ecopark-bourbon-cacapava-282m2-venda-RS234050-id-2838669313/",
+        "area": 282.0,
+        "preco_total": 234050.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "df541c064c25e23924ac169bffbccee2",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial para comprar em condomínio fechado com portaria 24h e 1200 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-terras-de-santa-mariana-cacapava-1200m2-venda-RS365000-id-2827467332/",
+        "area": 1200.0,
+        "preco_total": 365000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "23eab5d1943c793b2cd54159858cc796",
+        "municipio": "Cacapava",
+        "titulo": "Terreno residencial de 360 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-tijuco-preto-cacapava-360m2-venda-RS250000-id-2838904222/",
+        "area": 360.0,
+        "preco_total": 250000.0,
+        "localizacao": "Caçapava"
+    },
+    {
+        "id_anuncio": "384fc28fbd56d71f9877df3d3ec5fe41",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 1250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-chacaras-renno-piratininga-1250m2-venda-RS245000-id-2890169770/",
+        "area": 1250.0,
+        "preco_total": 245000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "259345be7d544222a53a7ddeda155d64",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 462 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-piratininga-462m2-venda-RS180000-id-2879531185/",
+        "area": 462.0,
+        "preco_total": 180000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "aa8609b05339362d350e734b4136286a",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 322 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bichara-maluf-piratininga-322m2-venda-RS310000-id-2874768679/",
+        "area": 322.0,
+        "preco_total": 310000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "1a0a8f4dca352847510e35424f72f74b",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 312 m² disponível para venda em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-guestier-piratininga-312m2-venda-RS260000-id-2893800921/",
+        "area": 312.0,
+        "preco_total": 260000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "6fcab33d9e729d13a15f3c3dc8e62189",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial com 269 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-piratininga-269m2-venda-RS200000-id-2837408928/",
+        "area": 269.0,
+        "preco_total": 200000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "2ed1f77a73710cbef4a12365563117df",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 300 m² à venda com jardim no condomínio em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-guestier-piratininga-300m2-venda-RS300000-id-2873877981/",
+        "area": 300.0,
+        "preco_total": 300000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "d4a9a21d96b8d78afc0b8c09704875c4",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 402 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-avila-piratininga-piratininga-402m2-venda-RS180000-id-2883102173/",
+        "area": 402.0,
+        "preco_total": 180000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "be4cf47b0a178e375140c7cd30093e8a",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 429 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bichara-maluf-piratininga-429m2-venda-RS320000-id-2888797073/",
+        "area": 429.0,
+        "preco_total": 320000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "72b51614b0965f86bbc9eb5bc5eeed0e",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial com 300 m² em condomínio com piscina e condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-300m2-venda-RS260000-id-2638698179/",
+        "area": 300.0,
+        "preco_total": 260000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "845e5d4d814f5bb1f05de1164b88e72b",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 269 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-269m2-venda-RS215000-id-2850456940/",
+        "area": 269.0,
+        "preco_total": 215000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "c03d2a878f5199b79483e40311a6f0f2",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 403 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-solar-primavera-piratininga-403m2-venda-RS180000-id-2878510874/",
+        "area": 403.0,
+        "preco_total": 180000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "87b6e2aca2a497a34b2fb45b07285fe9",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 330 m² disponível para venda em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-guestier-piratininga-330m2-venda-RS270000-id-2893800292/",
+        "area": 330.0,
+        "preco_total": 270000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "9cecc604d534767bf31c373929058ea4",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial com 300 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-300m2-venda-RS240000-id-2867897882/",
+        "area": 300.0,
+        "preco_total": 240000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "e7396ea1d69933f253ffc7e9c39c74ce",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 402 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-piratininga-402m2-venda-RS170000-id-2874400277/",
+        "area": 402.0,
+        "preco_total": 170000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "1e31ebab55d024e2c9c5b50688503b89",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial com 300 m² em condomínio com piscina e fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-300m2-venda-RS250000-id-2624077360/",
+        "area": 300.0,
+        "preco_total": 250000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "896875171d5f2bb39f1fc72205b14a8a",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 595 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bichara-maluf-piratininga-595m2-venda-RS450000-id-2888794011/",
+        "area": 595.0,
+        "preco_total": 450000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "cded08deb708ca4366adbc4e7ad7e259",
+        "municipio": "Piratininga",
+        "titulo": "Terreno para comprar em condomínio fechado com portaria 24h e área de 400 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-avilla-piratininga-2-piratininga-400m2-venda-RS185000-id-2881586398/",
+        "area": 400.0,
+        "preco_total": 185000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "76bddbd8eebc1f921d8cbf3cc5c4add8",
+        "municipio": "Piratininga",
+        "titulo": "Terreno de 160 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-santa-maria-piratininga-160m2-venda-RS80000-id-2880237339/",
+        "area": 160.0,
+        "preco_total": 80000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "6b44b1c081246d5e8807a03ff796c1fa",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 257 m² com condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-piratininga-257m2-venda-RS120000-id-2811181660/",
+        "area": 257.0,
+        "preco_total": 120000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "716123d8bd4b5feb5985765d272080bc",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 3483 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-santa-cristina-piratininga-3483m2-venda-RS150000-id-2871928676/",
+        "area": 3483.0,
+        "preco_total": 150000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "af9c128fd4eba4224e3573ad42d8ff15",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 319 m² em condomínio com piscina e condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-319m2-venda-RS245000-id-2662017858/",
+        "area": 319.0,
+        "preco_total": 245000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "42ed8b9e7eff84a4624d06294a9c5bed",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial com condomínio fechado e piscina, 300 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-300m2-venda-RS220000-id-2829229479/",
+        "area": 300.0,
+        "preco_total": 220000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "bacd68dadefc3d5616522658519b952c",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial disponível para compra com área de 1322 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-fazenda-bandeirantes-piratininga-1322m2-venda-RS230000-id-2878642896/",
+        "area": 1322.0,
+        "preco_total": 230000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "83db05809114e3b13a31932980766362",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 315 m² à venda em condomínio com jardim em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-guestier-piratininga-315m2-venda-RS315000-id-2873878375/",
+        "area": 315.0,
+        "preco_total": 315000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "759287d05ef54221a5485c920b8cbea2",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 400 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-piratininga-400m2-venda-RS192000-id-2893510494/",
+        "area": 400.0,
+        "preco_total": 192000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "f38b68ac71c5d0ae8603085bd13b73df",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 300 m² em condomínio com piscina e segurança fechada para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-300m2-venda-RS195000-id-2881313812/",
+        "area": 300.0,
+        "preco_total": 195000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "b9b518976fc3a52ee443cf9aff702a42",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 325 m² em condomínio com piscina e fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-guestier-piratininga-325m2-venda-RS270000-id-2837410820/",
+        "area": 325.0,
+        "preco_total": 270000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "c21df6b21351595548496d2e1ccc2cda",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 300 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-villa-de-leon-piratininga-300m2-venda-RS250000-id-2883623115/",
+        "area": 300.0,
+        "preco_total": 250000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "9bae63d8bf697305727b0f76332d3fdb",
+        "municipio": "Piratininga",
+        "titulo": "Terreno residencial de 319 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-guestier-piratininga-319m2-venda-RS240000-id-2887674680/",
+        "area": 319.0,
+        "preco_total": 240000.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "b3dd1564e568ad5c37ad634917dd00a9",
+        "municipio": "Piratininga",
+        "titulo": "Terreno para comprar em condomínio com piscina e área fechada de 250 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-santa-maria-piratininga-250m2-venda-RS157500-id-2880221094/",
+        "area": 250.0,
+        "preco_total": 157500.0,
+        "localizacao": "Piratininga"
+    },
+    {
+        "id_anuncio": "3d57d88652de47a1cfd69b4edefe6b1f",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 211 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-cidade-imperial-guapiacu-211m2-venda-RS90000-id-2880646292/",
+        "area": 211.0,
+        "preco_total": 90000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "49097e12afaa69ed198f6e224cd28bd5",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 600 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-monte-castelo-guapiacu-600m2-venda-RS90000-id-2871343391/",
+        "area": 600.0,
+        "preco_total": 90000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "5ddf5146d7f948c769d303797280494e",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial disponível para venda com área de 200 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-antonieta-ii-guapiacu-200m2-venda-RS105000-id-2872979516/",
+        "area": 200.0,
+        "preco_total": 105000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "6ed2aa37ed0edd4ba6a077b5b07e98bd",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 450 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-450m2-venda-RS145000-id-2872325406/",
+        "area": 450.0,
+        "preco_total": 145000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "7cf9c87aa0cf86a81440aec20c29a79e",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 420 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-antonieta-ii-guapiacu-420m2-venda-RS150000-id-2872981213/",
+        "area": 420.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "f7d6929f6135da837334e8a6997128e3",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 248 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-guapiacu-248m2-venda-RS200000-id-2872981892/",
+        "area": 248.0,
+        "preco_total": 200000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "098203c5fe5d47a7577a616e5ab0f179",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872984249/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "14977ca2ba8a0d0d34890260d7bbabe1",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 1150 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-guapiacu-1150m2-venda-RS210000-id-2867686247/",
+        "area": 1150.0,
+        "preco_total": 210000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "d52a4bcd6823a2cef62807edffe7e23c",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bosque-dos-ipes-guapiacu-200m2-venda-RS80000-id-2878418485/",
+        "area": 200.0,
+        "preco_total": 80000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "b473adbf57139c6727c7901a09acbb5c",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872984250/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "4baee854ff4b2dda9d77c578fdad33e6",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 523 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-alvorada-guapiacu-523m2-venda-RS210000-id-2872986016/",
+        "area": 523.0,
+        "preco_total": 210000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "549c7c1c5c6a4b96721ad419b60e1048",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 200 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-alvorada-guapiacu-200m2-venda-RS86020-id-2885566580/",
+        "area": 200.0,
+        "preco_total": 86020.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "71c0067f46469646c9d61346c52abcee",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872983195/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "2e45d9d56342f4dd28ad9862ce2ace73",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872980833/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "514fbafc67bb1dac1c08fab2864274c2",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872986876/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "83d671ffc4b6832162569a1204413bd7",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 600 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-guapiacu-600m2-venda-RS85000-id-2872327361/",
+        "area": 600.0,
+        "preco_total": 85000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "528ff0881def0804ca7bf90abee54627",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial disponível para compra com área de 600 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-guapiacu-600m2-venda-RS85000-id-2873856504/",
+        "area": 600.0,
+        "preco_total": 85000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "f998de6c6707ce5247f2e9c474e7b14b",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS90000-id-2872986307/",
+        "area": 480.0,
+        "preco_total": 90000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "23314f9ea52a2430b8ef1b3ef106cdc6",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872984248/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "5aadb5c964a3cc832bc827fe8a5ca4ff",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872976943/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "59ff5cc1a0f5c402063ac5475febbc27",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-antonieta-ii-guapiacu-200m2-venda-RS150000-id-2872983970/",
+        "area": 200.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "fa3fd3245a3335fdaef4d5377a5e8ad2",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-leonor-guapiacu-200m2-venda-RS130000-id-2872982704/",
+        "area": 200.0,
+        "preco_total": 130000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "114c090cb03236bf849a7dc7fa8d3701",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 450 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-guapiacu-450m2-venda-RS110000-id-2872810320/",
+        "area": 450.0,
+        "preco_total": 110000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "fa336a2d495f26ad1f3722029ca54099",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial com condomínio fechado de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-200m2-venda-RS85000-id-2840344950/",
+        "area": 200.0,
+        "preco_total": 85000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "9fb65c42c3ee9bd8574a94a05b32f847",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 375 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-portal-do-sol-guapiacu-375m2-venda-RS85000-id-2886727091/",
+        "area": 375.0,
+        "preco_total": 85000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "bc9775af5ff00f4cba93b71e3e879fc6",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 450 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-guapiacu-450m2-venda-RS110000-id-2872816963/",
+        "area": 450.0,
+        "preco_total": 110000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "173f772f17a06ea24f7ffd49d9825560",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872984122/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "41e2d0c060c055adcaa1069afa312eff",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872984774/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "99b70eb3d68a6a7869042c6b42e7bb22",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872979947/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "76f67b47ff9a20281570dcfbc32b5fed",
+        "municipio": "Guapiacu",
+        "titulo": "Terreno residencial de 480 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-sol-guapiacu-480m2-venda-RS150000-id-2872986310/",
+        "area": 480.0,
+        "preco_total": 150000.0,
+        "localizacao": "Guapiaçu"
+    },
+    {
+        "id_anuncio": "80ccc5f0dea72324868dca9c812f4d9e",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 125 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-santa-cecilia-bauru-125m2-venda-RS110000-id-2895339305/",
+        "area": 125.0,
+        "preco_total": 110000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "a97db71f90aed937850b64359d9b1b73",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 412 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-chacara-sao-joao-bauru-412m2-venda-RS80000-id-2876184287/",
+        "area": 412.0,
+        "preco_total": 80000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "5475e4b7d790be9fb974d72c9885e0c4",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 270 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-das-nacoes-bauru-270m2-venda-RS170000-id-2876395887/",
+        "area": 270.0,
+        "preco_total": 170000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "89f75a86a4e620e23ddba87622e18c53",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 473 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-sao-francisco-bauru-473m2-venda-RS293000-id-2874400184/",
+        "area": 473.0,
+        "preco_total": 293000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "ac2cb7d41d06529aab7cb9e4a67f3667",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial com condomínio fechado e portaria 24h disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-floratta-nacoes-residencial-bauru-344m2-venda-RS257000-id-2893120395/",
+        "area": 344.0,
+        "preco_total": 257000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "542a249a3fbfffcb8bb4a693649f1331",
+        "municipio": "Bauru",
+        "titulo": "Lote/Terreno para comprar com 412 m² em  Chácara São João, Bauru",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-chacara-sao-joao-bauru-412m2-venda-RS80000-id-2876183106/",
+        "area": 412.0,
+        "preco_total": 80000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "a0bcab4fe7f59c097f23b0a9cd371fc2",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial disponível para compra com área de 125 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-castelo-bauru-125m2-venda-RS120000-id-2874397708/",
+        "area": 125.0,
+        "preco_total": 120000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "5970c41872d5888a013afeefabb6c42b",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 270 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-das-nacoes-bauru-270m2-venda-RS170000-id-2876394094/",
+        "area": 270.0,
+        "preco_total": 170000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "19cbf160d70b6fa103dd4a3f9bbc5561",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 125 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-santa-cecilia-bauru-125m2-venda-RS110000-id-2895342982/",
+        "area": 125.0,
+        "preco_total": 110000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "fd40cd9e3dd29ec84f8ec6e6820e486c",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-silvestre-bauru-250m2-venda-RS185000-id-2507777567/",
+        "area": 250.0,
+        "preco_total": 185000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "43784d963d793d960f3e94537977811b",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 225 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-martha-bauru-225m2-venda-RS150000-id-2850456530/",
+        "area": 225.0,
+        "preco_total": 150000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "cfcc19eff45701266d37084ffcfb29c0",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 800 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-quinta-da-bela-olinda-bauru-800m2-venda-RS280000-id-2874398730/",
+        "area": 800.0,
+        "preco_total": 280000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "1eaa08068e4819f10fe3d56022e96b09",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 182 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-industrial-bauru-182m2-venda-RS120000-id-2892317094/",
+        "area": 182.0,
+        "preco_total": 120000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "f1b7f2fcd6752e65418198cc0520944a",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 379 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-samambaia-parque-residencial-bauru-379m2-venda-RS349980-id-2873085781/",
+        "area": 379.0,
+        "preco_total": 349980.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "72ae43800b9d51c395f95a0e4dd9390c",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-de-allah-bauru-250m2-venda-RS160000-id-2850458119/",
+        "area": 250.0,
+        "preco_total": 160000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "fe6818a333d1e9ee37b2f1f5a8ce9a55",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial com academia no condomínio e 422 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-village-campo-novo-bauru-422m2-venda-RS270000-id-2806598817/",
+        "area": 422.0,
+        "preco_total": 270000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "fa848db9de43a60f406173e6acf59af4",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 126 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-prudencia-bauru-126m2-venda-RS114000-id-2873878379/",
+        "area": 126.0,
+        "preco_total": 114000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "e940c3575b451f529f704a4e7d8d73f9",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 251 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-conjunto-habitacional-isaura-pitta-garms-bauru-251m2-venda-RS170000-id-2865223660/",
+        "area": 251.0,
+        "preco_total": 170000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "9fe4042202306e2fded67852ba559480",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 132 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-olimpico-bauru-132m2-venda-RS160000-id-2881019473/",
+        "area": 132.0,
+        "preco_total": 160000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "5b3236aaf432d2f10aa585728d68e694",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 440 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vargem-limpa-i-bauru-440m2-venda-RS250000-id-2821182795/",
+        "area": 440.0,
+        "preco_total": 250000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "9513e014c009d51569fcfbd7506d63fb",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 360 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-quinta-ranieri-bauru-360m2-venda-RS235000-id-2873084814/",
+        "area": 360.0,
+        "preco_total": 235000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "2b0523f1e21cca09c23b07a85082c6e8",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 301 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-floratta-nacoes-residencial-bauru-301m2-venda-RS250000-id-2581069083/",
+        "area": 301.0,
+        "preco_total": 250000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "9dcd703f36c5b9b5e974f9d846c0f142",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 250 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-floratta-nacoes-residencial-bauru-250m2-venda-RS194000-id-2873080767/",
+        "area": 250.0,
+        "preco_total": 194000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "a898d22ced580404f66f12de37b9ff34",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 229 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-industrial-bauru-229m2-venda-RS200000-id-2874398022/",
+        "area": 229.0,
+        "preco_total": 200000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "6fa9ea20855ba263f94b964a56abc46b",
+        "municipio": "Bauru",
+        "titulo": "Terreno disponível para venda de 500 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-mary-bauru-500m2-venda-RS72000-id-2437543392/",
+        "area": 500.0,
+        "preco_total": 72000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "c4b8a4a0f4a51d3049caad1673c4d1c3",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial com 344 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-floratta-nacoes-residencial-bauru-344m2-venda-RS249000-id-2826764946/",
+        "area": 344.0,
+        "preco_total": 249000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "a6d4c2cb7b09ec5ef44ed5f0177edf1b",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 400 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-quinta-ranieri-bauru-400m2-venda-RS255000-id-2873082976/",
+        "area": 400.0,
+        "preco_total": 255000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "a6e41ff3292c1acf987e5041dfde8fab",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 125 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-santa-cecilia-bauru-125m2-venda-RS110000-id-2895340504/",
+        "area": 125.0,
+        "preco_total": 110000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "0653a3c490c645f93f7fc120390d91e7",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 180 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-tangaras-bauru-180m2-venda-RS90000-id-2894843979/",
+        "area": 180.0,
+        "preco_total": 90000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "3b0a7432260b5475f9e6dce78c230e09",
+        "municipio": "Bauru",
+        "titulo": "Terreno residencial de 260 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-bauru-260m2-venda-RS290000-id-2624077050/",
+        "area": 260.0,
+        "preco_total": 290000.0,
+        "localizacao": "Bauru"
+    },
+    {
+        "id_anuncio": "0e84a7ab3d653e2015949465e4d21f17",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 250 m² em  Jardim Terras de Santa Helena, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-terras-de-santa-helena-jacarei-250m2-venda-RS200000-id-2897705498/",
+        "area": 250.0,
+        "preco_total": 200000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "d7bf5ba849122fe8a9880f886bd7589e",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial disponível para compra em condomínio fechado com 450 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-vem-viver-jacarei-jacarei-450m2-venda-RS550000-id-2778417712/",
+        "area": 450.0,
+        "preco_total": 550000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "2bfa75fc1f8a57c0389edbb04f4f0ecc",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 338 m² em  Jardim Novo Amanhecer, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-novo-amanhecer-jacarei-338m2-venda-RS290000-id-2802424138/",
+        "area": 338.0,
+        "preco_total": 290000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "922e01e78910a86e3bb5ee826607b791",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 228 m² em  Jardim Siesta, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-siesta-jacarei-228m2-venda-RS260000-id-2811218665/",
+        "area": 228.0,
+        "preco_total": 260000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "a93c650eb548b3a589bd251b0cb1fd00",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  Rio Abaixo, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-rio-abaixo-jacarei-1000m2-venda-RS99990-id-2897927309/",
+        "area": 1000.0,
+        "preco_total": 99990.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "ff17a0cb79b08f4099c13c23fcdfb536",
+        "municipio": "Jacarei",
+        "titulo": "Terreno de 331 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-terras-de-sao-joao-jacarei-331m2-venda-RS270000-id-2763580654/",
+        "area": 331.0,
+        "preco_total": 270000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "6647c1f1abc7abf3625fa68acebea86f",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 212 m² em  Jardim Jacinto, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-jacinto-jacarei-212m2-venda-RS300000-id-2863727255/",
+        "area": 212.0,
+        "preco_total": 300000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "b2b8cbc2b8425ff46c7bc1e1fc2e5775",
+        "municipio": "Jacarei",
+        "titulo": "Terreno disponível para compra com área de 220 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-florida-jacarei-com-garagem-220m2-venda-RS430000-id-2892016180/",
+        "area": 220.0,
+        "preco_total": 430000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "b231af385e26993fdf2e4d903fca25f4",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial com 250 m² disponível para compra em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-vem-viver-jacarei-jacarei-250m2-venda-RS480000-id-2891939875/",
+        "area": 250.0,
+        "preco_total": 480000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "f1ceb739c9998eb0f10b681280fa4f9d",
+        "municipio": "Jacarei",
+        "titulo": "Terreno de 1000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-rio-abaixo-jacarei-1000m2-venda-RS99990-id-2890120702/",
+        "area": 1000.0,
+        "preco_total": 99990.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "65b7f307ea107a5d7568e33bd9157fe9",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial com 250 m² disponível para compra em condomínio com piscina e área fechada em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-gabriel-jacarei-250m2-venda-RS360000-id-2890717639/",
+        "area": 250.0,
+        "preco_total": 360000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "0a58bd62520e11f09e435ae25228f86e",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bandeira-branca-jacarei-250m2-venda-RS335000-id-2748256970/",
+        "area": 250.0,
+        "preco_total": 335000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "b72df04916ddd4c37f6b64589ccde46e",
+        "municipio": "Jacarei",
+        "titulo": "Terreno de 320 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-terras-de-sao-joao-jacarei-com-garagem-320m2-venda-RS290000-id-2859293862/",
+        "area": 320.0,
+        "preco_total": 290000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "d718de4641071a6e5e83c8fd7f1a9771",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 250 m² em condomínio com piscina e portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bandeira-branca-jacarei-250m2-venda-RS351000-id-2873302615/",
+        "area": 250.0,
+        "preco_total": 351000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "232e69eedefbc9a04eb26d2d7742296f",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 270 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-bandeira-branca-jacarei-270m2-venda-RS370000-id-2777780813/",
+        "area": 270.0,
+        "preco_total": 370000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "2240186cdaca5813295f06f9832773ed",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 250 m² em condomínio com piscina e área fechada para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-gabriel-jacarei-250m2-venda-RS351000-id-2873302001/",
+        "area": 250.0,
+        "preco_total": 351000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "a17b90e1419539d46e288b195254ede3",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial com 250 m² em condomínio com piscina e acesso seguro para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-gabriel-jacarei-250m2-venda-RS350000-id-2873303887/",
+        "area": 250.0,
+        "preco_total": 350000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "2539ea039a6890e574dc26484f8289b7",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 212 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-jacinto-jacarei-212m2-venda-RS310000-id-2895325377/",
+        "area": 212.0,
+        "preco_total": 310000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "29ce9c5bdec024c7e994f5e23ce9b95e",
+        "municipio": "Jacarei",
+        "titulo": "Terreno disponível para compra com área de 1000 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-rio-abaixo-jacarei-1000m2-venda-RS99990-id-2890119431/",
+        "area": 1000.0,
+        "preco_total": 99990.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "947efdbc20da469bc732cc41f3458d32",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 238 m² em  Residencial Santa Paula, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-santa-paula-jacarei-238m2-venda-RS280000-id-2824805841/",
+        "area": 238.0,
+        "preco_total": 280000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "c301d994b9628c40cc62a2d97d399ab2",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 150 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-do-marques-jacarei-150m2-venda-RS173000-id-2842864718/",
+        "area": 150.0,
+        "preco_total": 173000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "8cda553b4c4415acc1b5f86bf26e61a6",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 270 m² em condomínio com churrasqueira e salão de festas para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-residencial-golden-park-jacarei-270m2-venda-RS320000-id-2576327914/",
+        "area": 270.0,
+        "preco_total": 320000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "e5b08e65bcf7db3b656a0017a38239e0",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  Jardim Olympia, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-olympia-jacarei-1000m2-venda-RS250000-id-2818205149/",
+        "area": 1000.0,
+        "preco_total": 250000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "b8af4d71d1fdab8a9b4efab9c0627bfa",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 2406 m² em  Veraneio Irajá, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-veraneio-iraja-jacarei-2406m2-venda-RS218000-id-2897572192/",
+        "area": 2406.0,
+        "preco_total": 218000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "c7217cecd53bee5ae8a657763c5bf04e",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial de 250 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-vem-viver-jacarei-jacarei-250m2-venda-RS460000-id-2803782940/",
+        "area": 250.0,
+        "preco_total": 460000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "119e3989dd95003e37ec5ed1a020e775",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 2404 m² em  Veraneio Irajá, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-veraneio-iraja-jacarei-2404m2-venda-RS218000-id-2897681587/",
+        "area": 2404.0,
+        "preco_total": 218000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "dfacd7eff07f969d06d1eddfe98879f3",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  Rio Abaixo, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-rio-abaixo-jacarei-1000m2-venda-RS99990-id-2897932177/",
+        "area": 1000.0,
+        "preco_total": 99990.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "01333201480cdcd1c8a47c80ff5f7b20",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial disponível para compra com área de 320 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-terras-de-santa-helena-jacarei-320m2-venda-RS320000-id-2883441778/",
+        "area": 320.0,
+        "preco_total": 320000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "874cf2ea1723ebe4a682c0767adb4d96",
+        "municipio": "Jacarei",
+        "titulo": "Terreno residencial disponível para compra com área de 300 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-santa-maria-jacarei-300m2-venda-RS381000-id-2875621553/",
+        "area": 300.0,
+        "preco_total": 381000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "6f3529544f1f0e1a6791c92f15225774",
+        "municipio": "Jacarei",
+        "titulo": "Lote/Terreno para comprar com 300 m² em  Jardim Santa Maria, Jacareí",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-santa-maria-jacarei-300m2-venda-RS350000-id-2830602020/",
+        "area": 300.0,
+        "preco_total": 350000.0,
+        "localizacao": "Jacareí"
+    },
+    {
+        "id_anuncio": "1f83d3e546b0677367971fa20d21110e",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 360 m² em  Além Ponte, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-alem-ponte-sorocaba-360m2-venda-RS390000-id-2897999427/",
+        "area": 360.0,
+        "preco_total": 390000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "81f3fab9b66a39797b5323efbc2359a5",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 360 m² em  Além Ponte, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-alem-ponte-sorocaba-360m2-venda-RS380000-id-2897998580/",
+        "area": 360.0,
+        "preco_total": 380000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "0d575e4a034fce7c500c1d4c2144bd5b",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial de 460 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-cidade-jardim-sorocaba-460m2-venda-RS250000-id-2881078430/",
+        "area": 460.0,
+        "preco_total": 250000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "97d428892b49ffee68956417c85e75d0",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 140 m² em  Vila São João, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-sao-joao-sorocaba-140m2-venda-RS230000-id-2896452418/",
+        "area": 140.0,
+        "preco_total": 230000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "df2c02684383ec371b0dcb7e664ae46b",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 220 m² em  Jardim Villagio Milano, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-villagio-milano-sorocaba-220m2-venda-RS266000-id-2897997983/",
+        "area": 220.0,
+        "preco_total": 266000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "c0bc55c58fe25eecb4f1b5cb664fcb50",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial de 380 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-emilia-sorocaba-380m2-venda-RS298000-id-2894919480/",
+        "area": 380.0,
+        "preco_total": 298000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "acf5ffde8e74ed219dae40872a396155",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 360 m² em  Além Ponte, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-alem-ponte-sorocaba-360m2-venda-RS390000-id-2898001491/",
+        "area": 360.0,
+        "preco_total": 390000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "4185e0902f88379b728f94ce77272758",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno em condomínio com piscina e área de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-novo-horizonte-sorocaba-200m2-venda-RS245000-id-2467586977/",
+        "area": 200.0,
+        "preco_total": 245000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "4ba6272d1236cdda7315dcacd68f5982",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial de 150 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-wanel-ville-iv-sorocaba-150m2-venda-RS190000-id-2892283280/",
+        "area": 150.0,
+        "preco_total": 190000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "c5b23dd011ac4fedda4d514e74234cd1",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 250 m² em  Morros, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-morros-sorocaba-250m2-venda-RS299000-id-2897997722/",
+        "area": 250.0,
+        "preco_total": 299000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "95c2a5e70b48b68016079f86e64016fe",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 154 m² em  Jardim Residencial Villagio Ipanema I, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-residencial-villagio-ipanema-i-sorocaba-154m2-venda-RS206700-id-2896449808/",
+        "area": 154.0,
+        "preco_total": 206700.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "3ca918e00f6dc0695882ccdcbe2d9d63",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 375 m² em  Vila Barcelona, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-barcelona-sorocaba-375m2-venda-RS235000-id-2898227417/",
+        "area": 375.0,
+        "preco_total": 235000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "6c8727e0037d1f94ab59cd5f5cfb9984",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno com 200 m² em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-horto-florestal-sorocaba-200m2-venda-RS210000-id-2661759200/",
+        "area": 200.0,
+        "preco_total": 210000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "986e1484134a9a9efb692d17b8a0604f",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 212 m² em  Jardim Villagio Milano, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-villagio-milano-sorocaba-212m2-venda-RS260000-id-2897998118/",
+        "area": 212.0,
+        "preco_total": 260000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "6d2326be723d8fda33754504d42a036b",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 130 m², 1 quarto, 1 banheiro, 1 vaga em  Jardim Nova Esperança, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-1-quartos-jardim-nova-esperanca-sorocaba-com-garagem-130m2-venda-RS81051-id-2897543014/",
+        "area": 130.0,
+        "preco_total": 81051.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "0e14e67d24bb2bd7f6c4adfc6b2081d8",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 124 m², 1 quarto, 1 banheiro, 1 vaga em  Parque Vitória Régia, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-1-quartos-parque-vitoria-regia-sorocaba-com-garagem-124m2-venda-RS79447-id-2897543135/",
+        "area": 124.0,
+        "preco_total": 79447.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "8eeecccccd0550eb35c8a2353422a7bb",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 300 m², 4 vagas em  Vila Haro, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-haro-sorocaba-com-garagem-300m2-venda-RS260000-id-2896557223/",
+        "area": 300.0,
+        "preco_total": 260000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "c0e1ca88e42c9f269c980bab0913c200",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 360 m² em  Além Ponte, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-alem-ponte-sorocaba-360m2-venda-RS390000-id-2897999503/",
+        "area": 360.0,
+        "preco_total": 390000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "ffd21be267f44f6e340af674a80949b2",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial de 262 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-carvalho-sorocaba-262m2-venda-RS300000-id-2863918358/",
+        "area": 262.0,
+        "preco_total": 300000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "c5d0b4f9dc62fbfa50b3315cd6b8306f",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial com 200 m², condomínio com portaria 24h e churrasqueira para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-novo-horizonte-sorocaba-200m2-venda-RS288000-id-2892283581/",
+        "area": 200.0,
+        "preco_total": 288000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "44bd19173384459b2e363454278d42a6",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 250 m² em  Cajuru do Sul, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-cajuru-do-sul-sorocaba-250m2-venda-RS299000-id-2896136088/",
+        "area": 250.0,
+        "preco_total": 299000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "a302fbe966b72d189aa4805ba4ae459d",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-alem-ponte-sorocaba-250m2-venda-RS185000-id-2444736088/",
+        "area": 250.0,
+        "preco_total": 185000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "d1c6141e467a5683b95ff779990ab5aa",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 150 m² em  Residencial Jardim Nathália, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-jardim-nathalia-sorocaba-150m2-venda-RS180000-id-2896693975/",
+        "area": 150.0,
+        "preco_total": 180000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "3bf57cfe5a6682a63b222b03431e3ace",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 261 m² em  Morros, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-morros-sorocaba-261m2-venda-RS329000-id-2896454220/",
+        "area": 261.0,
+        "preco_total": 329000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "974b2363874f28ee083754544e8786b5",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial de 325 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-bandeirantes-sorocaba-325m2-venda-RS320000-id-2837520326/",
+        "area": 325.0,
+        "preco_total": 320000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "4a8464a445cb06c736d4c3cf5ae9f3df",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno de 154 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-vista-barbara-sorocaba-154m2-venda-RS150000-id-2892864976/",
+        "area": 154.0,
+        "preco_total": 150000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "2f1f75aa2db755fd72c8f4d3b207c763",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 310 m² em  Jardim Prestes de Barros, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-prestes-de-barros-sorocaba-310m2-venda-RS265000-id-2896445210/",
+        "area": 310.0,
+        "preco_total": 265000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "624e5ef6cba259cf3a646abde2876a0f",
+        "municipio": "Sorocaba",
+        "titulo": "Lote/Terreno para comprar com 331 m² em  Jardim Gramados de Sorocaba, Sorocaba",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-gramados-de-sorocaba-sorocaba-331m2-venda-RS279000-id-2896522176/",
+        "area": 331.0,
+        "preco_total": 279000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "9740d341d54744b73745fb007d1e8aab",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial disponível para compra com área de 125 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-nova-aparecidinha-sorocaba-125m2-venda-RS100000-id-2885321479/",
+        "area": 125.0,
+        "preco_total": 100000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "0c01e85b5ee56d1a078196a1de3fc509",
+        "municipio": "Sorocaba",
+        "titulo": "Terreno residencial de 1000 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-ecoresidencial-fazenda-jequitiba-sorocaba-1000m2-venda-RS599000-id-2872870823/",
+        "area": 1000.0,
+        "preco_total": 599000.0,
+        "localizacao": "Sorocaba"
+    },
+    {
+        "id_anuncio": "3813503b259cf37d70f98bdf1bdf2823",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 360 m² em  Eugênio de Mello, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eugenio-de-mello-sao-jose-dos-campos-360m2-venda-RS250000-id-2896025185/",
+        "area": 360.0,
+        "preco_total": 250000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "cb2b0e8ee3f2e5eef5b19fc547cd29d8",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 132 m² em  Jardim Nova República, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-nova-republica-sao-jose-dos-campos-132m2-venda-RS130000-id-2898269383/",
+        "area": 132.0,
+        "preco_total": 130000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "c9ab31de945e47e2d422c45cb9cedb7e",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 2 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aguas-do-canindu-sao-jose-dos-campos-2m2-venda-RS700000-id-2823019970/",
+        "area": 2.0,
+        "preco_total": 700000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "50f72da9583a3cb8423244b09ae70dbd",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 500 m² em  Jardim Satélite, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-satelite-sao-jose-dos-campos-500m2-venda-RS2650000000-id-2896268815/",
+        "area": 500.0,
+        "preco_total": 2650000000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "2217ca5ca0e00c5ac62ca82a4c10a5dd",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 270 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-santa-luzia-sao-jose-dos-campos-270m2-venda-RS325000-id-2894934481/",
+        "area": 270.0,
+        "preco_total": 325000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "3278a4e2fa41537b4f82607999293a8a",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-fazenda-ronda-sao-jose-dos-campos-250m2-venda-RS340000-id-2884929732/",
+        "area": 250.0,
+        "preco_total": 340000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "c38cfacbb3918cd7fbf4dbb2f57fd6e7",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial com 250 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-putim-sao-jose-dos-campos-250m2-venda-RS300000-id-2833595244/",
+        "area": 250.0,
+        "preco_total": 300000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "737e35c29d1e60038ed507f1766195cf",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 300 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-galo-branco-sao-jose-dos-campos-300m2-venda-RS260000-id-2893590886/",
+        "area": 300.0,
+        "preco_total": 260000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "2cbeb7584381ecfe104d7785ebcf339f",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial com 332 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-terras-alpha-sao-jose-dos-campos-sao-jose-dos-campos-332m2-venda-RS620000-id-2832403616/",
+        "area": 332.0,
+        "preco_total": 620000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "d1d13ff6ae467aef8f529a99734affa2",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 246 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-putim-sao-jose-dos-campos-246m2-venda-RS260000-id-2873823094/",
+        "area": 246.0,
+        "preco_total": 260000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "9a4793a225c4f7cfb3aab32abd91cfbb",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial com 336 m² em condomínio fechado disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-urbanova-sao-jose-dos-campos-336m2-venda-RS615000-id-2815549284/",
+        "area": 336.0,
+        "preco_total": 615000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "323c8bd00a7a1f51695fa24eeb775d7b",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 330 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-terras-alpha-sao-jose-dos-campos-sao-jose-dos-campos-330m2-venda-RS560000-id-2887859173/",
+        "area": 330.0,
+        "preco_total": 560000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "abc9fc0f49b7df6f9ef6de525f9c18a0",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 270 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-santa-luzia-sao-jose-dos-campos-270m2-venda-RS325000-id-2894970581/",
+        "area": 270.0,
+        "preco_total": 325000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "1e513a2cd7aab16017f6920771d6f9d7",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno disponível para venda com área de 157 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-residencial-vista-linda-sao-jose-dos-campos-157m2-venda-RS350000-id-2878075791/",
+        "area": 157.0,
+        "preco_total": 350000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "3360f7d1e6181e58539e5b3a40446be9",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 252 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-residencial-mantiqueira-sao-jose-dos-campos-252m2-venda-RS275000-id-2872952240/",
+        "area": 252.0,
+        "preco_total": 275000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "dd9ca8cea0b53a3793dd85c29cf13558",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 215 m² em  Chácaras Pousada do Vale, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-chacaras-pousada-do-vale-sao-jose-dos-campos-215m2-venda-RS160000-id-2896411805/",
+        "area": 215.0,
+        "preco_total": 160000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "773356c1fffeb1cc7b7465bc4b7d0ba8",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 300 m² em  Residencial União, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-uniao-sao-jose-dos-campos-300m2-venda-RS337500-id-2898240732/",
+        "area": 300.0,
+        "preco_total": 337500.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "17fdb4867e68a8e0725c943bdcad013a",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 125 m² em  Residencial Armando Moreira Righi, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-armando-moreira-righi-sao-jose-dos-campos-125m2-venda-RS138500-id-2897440780/",
+        "area": 125.0,
+        "preco_total": 138500.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "dddf3ddf0eaf052b4d2941da26482bee",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial à venda com 250 m², condomínio fechado e churrasqueira em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-fazenda-ronda-sao-jose-dos-campos-250m2-venda-RS360000-id-2889496189/",
+        "area": 250.0,
+        "preco_total": 360000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "3fa6bcaf6c33de1ffc3848842f3ae132",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial com 270 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-santa-herminia-sao-jose-dos-campos-270m2-venda-RS215808-id-2858113176/",
+        "area": 270.0,
+        "preco_total": 215808.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "c07e3b17f41297805899e08534655dc4",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Vila Amélia, São José dos Campos",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-amelia-sao-jose-dos-campos-200m2-venda-RS205000-id-2865091481/",
+        "area": 200.0,
+        "preco_total": 205000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "99f8f940ca2669b8efc87aeb0a7ff6c5",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 384 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eugenio-de-mello-sao-jose-dos-campos-384m2-venda-RS235000-id-2872941351/",
+        "area": 384.0,
+        "preco_total": 235000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "0305234a14cca126f85e17d03e03e18d",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 360 m² em condomínio com portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eugenio-de-mello-sao-jose-dos-campos-360m2-venda-RS240000-id-2866393388/",
+        "area": 360.0,
+        "preco_total": 240000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "d09c898f23f410719f3b57ba9138a82d",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial com 332 m² disponível para compra em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-terras-alpha-sao-jose-dos-campos-sao-jose-dos-campos-332m2-venda-RS630000-id-2867692405/",
+        "area": 332.0,
+        "preco_total": 630000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "efdf49d84e445a8d7018295f172b8e06",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 125 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-conjunto-residencial-galo-branco-sao-jose-dos-campos-125m2-venda-RS149000-id-2883413991/",
+        "area": 125.0,
+        "preco_total": 149000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "d567fc2f7b1659e7f641fe3adf82e306",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno de 194 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-dunamis-sao-jose-dos-campos-194m2-venda-RS135000-id-2788406542/",
+        "area": 194.0,
+        "preco_total": 135000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "13aad340593990fadd38cb395fb5be81",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial com portaria 24h e condomínio fechado, 360 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eugenio-de-mello-sao-jose-dos-campos-360m2-venda-RS235000-id-2869685995/",
+        "area": 360.0,
+        "preco_total": 235000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "d597a155360ae206e1af450dd1f7e068",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 360 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eugenio-de-mello-sao-jose-dos-campos-360m2-venda-RS295000-id-2839525514/",
+        "area": 360.0,
+        "preco_total": 295000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "7965a42ce643caf4c720db66f57260b2",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 450 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-vivant-urbanova-sao-jose-dos-campos-450m2-venda-RS850000-id-2865455172/",
+        "area": 450.0,
+        "preco_total": 850000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "9fe95abe3fcf60ce9306376efcd1ddea",
+        "municipio": "Sao-jose-dos-campos",
+        "titulo": "Terreno residencial de 220 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-mariana-ii-sao-jose-dos-campos-220m2-venda-RS190000-id-2872936701/",
+        "area": 220.0,
+        "preco_total": 190000.0,
+        "localizacao": "São José dos Campos"
+    },
+    {
+        "id_anuncio": "2e8a5de5677af4f951034fbc7bfd7df8",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 504 m² em  Jardim Arco Rio Verde, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-arco-rio-verde-aracoiaba-da-serra-504m2-venda-RS136000-id-2897826399/",
+        "area": 504.0,
+        "preco_total": 136000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "39680a2105b229e2d1f18b9c46691d04",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1917 m² em  Jundiaquara, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jundiaquara-aracoiaba-da-serra-1917m2-venda-RS233000-id-2896790805/",
+        "area": 1917.0,
+        "preco_total": 233000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "7b75075e51ba34b0b5c9bef4d452bb8f",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  Condomínio Saint Charbel, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-saint-charbel-aracoiaba-da-serra-1000m2-venda-RS360000-id-2897994893/",
+        "area": 1000.0,
+        "preco_total": 360000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "d5eb40b380714e6b06f3d2223af501a5",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 750 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jundiaquara-aracoiaba-da-serra-750m2-venda-RS148000-id-2894722702/",
+        "area": 750.0,
+        "preco_total": 148000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "2eda2b868c9235adf08df9276c9e6862",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial disponível para compra com área de 808 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-colonial-ii-aracoiaba-da-serra-808m2-venda-RS150000-id-2647411485/",
+        "area": 808.0,
+        "preco_total": 150000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "e600ae262ad8683b2976048d7ee386f6",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 1000 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aparecida-capanema-aracoiaba-da-serra-1000m2-venda-RS110000-id-2875536098/",
+        "area": 1000.0,
+        "preco_total": 110000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "8febb68816750affa757b1f34e73bb1a",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-m-da-gloria-aracoiaba-da-serra-200m2-venda-RS180000-id-2865549189/",
+        "area": 200.0,
+        "preco_total": 180000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "6f3bc688c860374d857d5dd6fe505ca3",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1042 m² em  Jardim Perlamar, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-perlamar-aracoiaba-da-serra-1042m2-venda-RS390000-id-2898000087/",
+        "area": 1042.0,
+        "preco_total": 390000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "d8c3e6a2d9d5226bca44d5ef3af56b36",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1040 m² em  Jundiacanga, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jundiacanga-aracoiaba-da-serra-1040m2-venda-RS100000-id-2896132969/",
+        "area": 1040.0,
+        "preco_total": 100000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "2b1a6b32c45e78822d06cd4f1da154fb",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 1000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-condominio-village-ipanema-2-aracoiaba-da-serra-1000m2-venda-RS295000-id-2873202744/",
+        "area": 1000.0,
+        "preco_total": 295000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "13f93a967a71360a952691cae4fefffc",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  , Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-1000m2-venda-RS120000-id-2894618900/",
+        "area": 1000.0,
+        "preco_total": 120000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "1c3ad49f8786189c894accd4025c246d",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 335 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-aracoiaba-da-serra-335m2-venda-RS171000-id-2892285077/",
+        "area": 335.0,
+        "preco_total": 171000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "37b2f5cb301453ed252793aa66643c89",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 1000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-colinas-ii-aracoiaba-da-serra-1000m2-venda-RS170000-id-2893818986/",
+        "area": 1000.0,
+        "preco_total": 170000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "8ff57768d8879d34543a7c9697712a06",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 1000 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aparecida-capanema-aracoiaba-da-serra-1000m2-venda-RS110000-id-2879302675/",
+        "area": 1000.0,
+        "preco_total": 110000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "6dba9e4cfc3aa840335a57de8e6a398c",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 250 m² à venda em condomínio com academia em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-resid-ercilia-aracoiaba-da-serra-250m2-venda-RS172000-id-2855415115/",
+        "area": 250.0,
+        "preco_total": 172000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "aafb94aa83f5eba760b2b32992880940",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  , Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-1000m2-venda-RS120000-id-2894616427/",
+        "area": 1000.0,
+        "preco_total": 120000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "492ac3d1191f9b470b08e5524b8f1a4b",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 865 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-village-da-serra-aracoiaba-da-serra-865m2-venda-RS164800-id-2673257665/",
+        "area": 865.0,
+        "preco_total": 164800.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "8919c900b3aabb8efa86e2735d35164b",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1104 m² em  Barreiro, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-barreiro-aracoiaba-da-serra-1104m2-venda-RS286100-id-2896315457/",
+        "area": 1104.0,
+        "preco_total": 286100.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "d76cd49a6feaba72a98f3780f7494238",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial com portaria 24h, churrasqueira no condomínio e 1000 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-1000m2-venda-RS392500-id-2877213594/",
+        "area": 1000.0,
+        "preco_total": 392500.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "6b07f40af47119e0f08ab808483d8767",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial com condomínio fechado e piscina, 800 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-barreiro-aracoiaba-da-serra-800m2-venda-RS199900-id-2871769799/",
+        "area": 800.0,
+        "preco_total": 199900.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "f11b5cfd68a4c9778bce973c196a8858",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 1000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-1000m2-venda-RS120000-id-2894614009/",
+        "area": 1000.0,
+        "preco_total": 120000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "1cf431c37b54c9b7bf0d55ba1aafb654",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 1050 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-aracoiaba-da-serra-1050m2-venda-RS180000-id-2884513713/",
+        "area": 1050.0,
+        "preco_total": 180000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "7bee4476c232e21b62a2bbed3a79cdcd",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Casa de condomínio para comprar com 500 m² em  , Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-500m2-venda-RS121000-id-2896546704/",
+        "area": 500.0,
+        "preco_total": 121000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "9b6fd7a118c19cd1ea48066e70ac822f",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno disponível para venda com área de 300 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-horizonte-aracoiaba-da-serra-300m2-venda-RS130000-id-2721358534/",
+        "area": 300.0,
+        "preco_total": 130000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "b75b8b2d7303eaa07edff3298347387b",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial disponível para venda com área de 623 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-master-aracoiaba-da-serra-623m2-venda-RS200000-id-2890041688/",
+        "area": 623.0,
+        "preco_total": 200000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "7d9c2a1b86ea581a066b1cd93cb665f3",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Casa de condomínio para comprar com 500 m² em  , Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-500m2-venda-RS99999-id-2896264449/",
+        "area": 500.0,
+        "preco_total": 99999.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "a546d5afc3af6f76fe73a1771cc7b9a0",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 335 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-335m2-venda-RS170000-id-2876363301/",
+        "area": 335.0,
+        "preco_total": 170000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "e23b8e3f0d3fcdb367e3b8dd7baa7d79",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Casa de condomínio para comprar com 500 m² em  , Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-500m2-venda-RS90000-id-2896260500/",
+        "area": 500.0,
+        "preco_total": 90000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "a8a8dfe412bbf48a9249d36f06495569",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Terreno residencial de 335 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aracoiaba-da-serra-335m2-venda-RS170000-id-2876358807/",
+        "area": 335.0,
+        "preco_total": 170000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "64444c5ed702e354878b4321c14f9dd0",
+        "municipio": "Aracoiaba-da-serra",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  Jundiaquara, Araçoiaba da Serra",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jundiaquara-aracoiaba-da-serra-1000m2-venda-RS261000-id-2896074874/",
+        "area": 1000.0,
+        "preco_total": 261000.0,
+        "localizacao": "Araçoiaba da Serra"
+    },
+    {
+        "id_anuncio": "4666e56a41c44caef492b5c957783243",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 1000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-aluminio-1000m2-venda-RS198000-id-2874558586/",
+        "area": 1000.0,
+        "preco_total": 198000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "c749636781436d7e744c2cf103b9c0f1",
+        "municipio": "Aluminio",
+        "titulo": "Lote/Terreno para comprar com 250 m² em  Vila Pedagio, Alumínio",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-pedagio-aluminio-250m2-venda-RS215000-id-2823526426/",
+        "area": 250.0,
+        "preco_total": 215000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "d330a9324c8cf6c80c4dda3ae33a42b8",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial com portaria 24h disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-irema-aluminio-175m2-venda-RS160000-id-2867584199/",
+        "area": 175.0,
+        "preco_total": 160000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "ea56f6736552d819d87b64e3984ca5d5",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 1000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-iguatemi-4-aluminio-1000m2-venda-RS150000-id-2877902973/",
+        "area": 1000.0,
+        "preco_total": 150000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "55195585234013b5d278cf1da3e3c811",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial disponível para compra, com 1000 m² em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-1000m2-venda-RS220000-id-2863280868/",
+        "area": 1000.0,
+        "preco_total": 220000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "6189dbf0611cd81b78de7679f730151b",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 1000 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-1000m2-venda-RS100000-id-2740958568/",
+        "area": 1000.0,
+        "preco_total": 100000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "c70d8287db4e37ae27026a6f1874de78",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 500 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-industrial-aluminio-500m2-venda-RS90000-id-2876020494/",
+        "area": 500.0,
+        "preco_total": 90000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "4679b852dfbe4556567b0865b4c0cb09",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial com 1000 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-1000m2-venda-RS220000-id-2863281158/",
+        "area": 1000.0,
+        "preco_total": 220000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "00a80eeee776ef3a0d0ae1ce9abdc066",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 519 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-519m2-venda-RS80000-id-2888173881/",
+        "area": 519.0,
+        "preco_total": 80000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "5e36f59543d4b4bb8dfdd8cd95368fac",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 1167 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-1167m2-venda-RS110000-id-2691218774/",
+        "area": 1167.0,
+        "preco_total": 110000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "463d03703f40ff27268022ec36b84ac8",
+        "municipio": "Aluminio",
+        "titulo": "Terreno disponível para compra com 500 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-area-rural-de-aluminio-aluminio-500m2-venda-RS100000-id-2772648219/",
+        "area": 500.0,
+        "preco_total": 100000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "bac8dd051c4412bb48cdd8b32f9ba239",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial com 175 m² disponível para compra em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-vila-industrial-aluminio-175m2-venda-RS110000-id-2777654263/",
+        "area": 175.0,
+        "preco_total": 110000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "e3408f419dbaa6201a1294c9839142c6",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial disponível para compra com área de 1000 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-1000m2-venda-RS190000-id-2774312313/",
+        "area": 1000.0,
+        "preco_total": 190000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "56d208a9f29576edd3c2f9e44c887985",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial disponível para compra com área de 10000 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-10000m2-venda-RS2000000-id-2709272593/",
+        "area": 10000.0,
+        "preco_total": 2000000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "5a72b0c05f0aa765ec269c64aff68585",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial disponível para compra com área de 2400 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-2400m2-venda-RS380000-id-2829927958/",
+        "area": 2400.0,
+        "preco_total": 380000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "08ab815863f0ab2694f9de12772168ac",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 4000 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-4000m2-venda-RS213000-id-2891908377/",
+        "area": 4000.0,
+        "preco_total": 213000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "a58ee339ddfd92865e53de112ce40164",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 9060 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-9060m2-venda-RS1999910-id-2734034766/",
+        "area": 9060.0,
+        "preco_total": 1999910.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "a3b1f62b34265e9b6c98b42cc9c9e5e5",
+        "municipio": "Aluminio",
+        "titulo": "Lote/Terreno para comprar com 1000 m² em  , Alumínio",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-1000m2-venda-RS440000-id-2809419425/",
+        "area": 1000.0,
+        "preco_total": 440000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "5c154c6aab407715fcf7aec40a915107",
+        "municipio": "Aluminio",
+        "titulo": "Lote/Terreno para comprar com 9694 m² em  Fazenda Genebra, Alumínio",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-fazenda-genebra-aluminio-9694m2-venda-RS640000-id-2897768288/",
+        "area": 9694.0,
+        "preco_total": 640000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "6f118bd745ac1a832a73ced246da85f7",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 10 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-figueiras-aluminio-10m2-venda-RS3930000-id-2880056003/",
+        "area": 10.0,
+        "preco_total": 3930000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "38e3acf52e60be7519a308816e03c5d6",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial de 10 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-10m2-venda-RS3498000-id-2880056825/",
+        "area": 10.0,
+        "preco_total": 3498000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "058c0d1562dc03b6c647200cedefb043",
+        "municipio": "Aluminio",
+        "titulo": "Terreno residencial com portaria 24h e 10000 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-aluminio-10000m2-venda-RS2000000-id-2810848522/",
+        "area": 10000.0,
+        "preco_total": 2000000.0,
+        "localizacao": "Alumínio"
+    },
+    {
+        "id_anuncio": "b87d45f4beb19ea54120fd9fcc405bf8",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-cedro-cedral-200m2-venda-RS80000-id-2827486116/",
+        "area": 200.0,
+        "preco_total": 80000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "e66c80b215e7546820114dc5951f3bc4",
+        "municipio": "Cedral",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Centro, Cedral",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-cedral-200m2-venda-RS105000-id-2828086422/",
+        "area": 200.0,
+        "preco_total": 105000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "cad32aaee56489dcca00db42ba658dbf",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-parque-gramado-cedral-200m2-venda-RS80000-id-2864717193/",
+        "area": 200.0,
+        "preco_total": 80000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "41b3a314c182c8dbddece1a4ed3e9d3d",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 221 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-paulo-cedral-221m2-venda-RS80000-id-2836995243/",
+        "area": 221.0,
+        "preco_total": 80000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "b3b640d5fd62ea18da702765adcffb3b",
+        "municipio": "Cedral",
+        "titulo": "Lote/Terreno para comprar com 214 m² em  Parque Gramado, Cedral",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-gramado-cedral-214m2-venda-RS100000-id-2896866314/",
+        "area": 214.0,
+        "preco_total": 100000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "f323e30365d6a4ca282a5e57a3a8ba69",
+        "municipio": "Cedral",
+        "titulo": "Lote/Terreno para comprar com 287 m² em  Centro, Cedral",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-cedral-287m2-venda-RS120000-id-2896766494/",
+        "area": 287.0,
+        "preco_total": 120000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "47e5924da3e43c37711ca53a27c7c782",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-portal-do-cedro-cedral-200m2-venda-RS70000-id-2875079063/",
+        "area": 200.0,
+        "preco_total": 70000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "6c8844dacd738470eba70670f07a95e7",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 250 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-galante-cedral-250m2-venda-RS58637-id-2894650192/",
+        "area": 250.0,
+        "preco_total": 58637.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "f37bc78d27c95fd44d1723451a33ba64",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial com 303 m² disponível para compra em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-avenida-parque-cedral-303m2-venda-RS90000-id-2817885216/",
+        "area": 303.0,
+        "preco_total": 90000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "2d11ea49d66577ede019aa60d6be6422",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 247 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-cedral-247m2-venda-RS100000-id-2872985212/",
+        "area": 247.0,
+        "preco_total": 100000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "8a4c74d5a38bcd115fd286cd1de1be75",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 187 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-cedro-cedral-187m2-venda-RS75000-id-2889462877/",
+        "area": 187.0,
+        "preco_total": 75000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "8395371895d5d1798e1d974d457eac74",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 180 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-paulo-cedral-180m2-venda-RS70000-id-2895132710/",
+        "area": 180.0,
+        "preco_total": 70000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "0c646e6bbebacde03aa014ce5658532f",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 250 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-galante-cedral-250m2-venda-RS58638-id-2872202306/",
+        "area": 250.0,
+        "preco_total": 58638.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "e9f950ab76df98366f21f54c2c464d53",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 221 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-mais-parque-cedral-cedral-221m2-venda-RS80000-id-2795854534/",
+        "area": 221.0,
+        "preco_total": 80000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "a6c7b55538bbe3a4737a65df74ed0ddc",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 180 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-di-napoli-cedral-180m2-venda-RS70000-id-2794301756/",
+        "area": 180.0,
+        "preco_total": 70000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "0d1e80568cc0a671ee96797f96978a87",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-distrito-industrial-cedral-250m2-venda-RS130000-id-2833199338/",
+        "area": 250.0,
+        "preco_total": 130000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "012c4cddedc7feb03130360d8cd42719",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 207 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-portal-do-cedro-cedral-207m2-venda-RS80000-id-2872985997/",
+        "area": 207.0,
+        "preco_total": 80000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "b639bb27f3301f8f87d4886464ead8c2",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial disponível para compra com área de 294 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-villagio-d-italia-cedral-294m2-venda-RS137000-id-2872982243/",
+        "area": 294.0,
+        "preco_total": 137000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "4a04ae958bb53a7c58338881017427b5",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 683 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-paulo-cedral-683m2-venda-RS190000-id-2872983895/",
+        "area": 683.0,
+        "preco_total": 190000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "5f4134dec45241e26dbbfe598518efdc",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 250 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-galante-cedral-250m2-venda-RS58638-id-2883850373/",
+        "area": 250.0,
+        "preco_total": 58638.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "1881da2668c0c95769d5b85b9df5f96a",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 275 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-campos-de-jordao-cedral-275m2-venda-RS95000-id-2817884713/",
+        "area": 275.0,
+        "preco_total": 95000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "121d1c56373b8c6b0dd0d00c9bda77ea",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-portal-do-cedro-cedral-200m2-venda-RS85000-id-2872820277/",
+        "area": 200.0,
+        "preco_total": 85000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "11ba8fa8544a134c1f76a88931a18b8e",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 161 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-santa-helena-cedral-161m2-venda-RS80000-id-2872818841/",
+        "area": 161.0,
+        "preco_total": 80000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "1d0ad80e87b6c7de9971b4615803e550",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 161 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-portal-do-cedro-cedral-161m2-venda-RS68000-id-2872981813/",
+        "area": 161.0,
+        "preco_total": 68000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "54507e02c58166acb48472a0da0e79c6",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial com 290 m² e condomínio com salão de festas para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-villagio-d-italia-cedral-290m2-venda-RS125000-id-2873882736/",
+        "area": 290.0,
+        "preco_total": 125000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "d096db5a2cb56d2fdaafd2a39da95d95",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 294 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-cedral-294m2-venda-RS150000-id-2872816472/",
+        "area": 294.0,
+        "preco_total": 150000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "af068581860ed7cb5cb001f1be3812f5",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 390 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-quinta-das-palmeiras-cedral-390m2-venda-RS156000-id-2872819824/",
+        "area": 390.0,
+        "preco_total": 156000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "cb7176c7d23c2bb4c6ff9a7e68fa155e",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 300 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-centro-cedral-300m2-venda-RS270000-id-2887200377/",
+        "area": 300.0,
+        "preco_total": 270000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "ea941d0f63b99409196c171288562a28",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-portal-do-cedro-cedral-200m2-venda-RS68000-id-2796980025/",
+        "area": 200.0,
+        "preco_total": 68000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "24d884e77e3ef8293e316a0e4b8fd564",
+        "municipio": "Cedral",
+        "titulo": "Terreno residencial de 340 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-cedral-340m2-venda-RS120000-id-2872976666/",
+        "area": 340.0,
+        "preco_total": 120000.0,
+        "localizacao": "Cedral"
+    },
+    {
+        "id_anuncio": "035a1aab06bf67f6e35f99ba57168813",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 305 m² em condomínio com piscina e acesso controlado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-305m2-venda-RS250000-id-2791447849/",
+        "area": 305.0,
+        "preco_total": 250000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "a229fd260e3148470c5c282db00d9f56",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com 333 m² em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terras-alphaville-mirassol-mirassol-333m2-venda-RS179000-id-2837994022/",
+        "area": 333.0,
+        "preco_total": 179000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "08cb61d514ff3922dee7b96a5f4228dc",
+        "municipio": "Mirassol",
+        "titulo": "Lote/Terreno para comprar com 253 m² em  Setlife Mirassol, Mirassol",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS210000-id-2898018177/",
+        "area": 253.0,
+        "preco_total": 210000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "1a1e535d01126c4870104f3697e8f5da",
+        "municipio": "Mirassol",
+        "titulo": "Lote/Terreno para comprar com 317 m² em  Terras Alphaville Mirassol, Mirassol",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terras-alphaville-mirassol-mirassol-317m2-venda-RS195000-id-2898317081/",
+        "area": 317.0,
+        "preco_total": 195000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "9cc445e3482a91e4afc97504c0d4b250",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com condomínio fechado e piscina, 253 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS200000-id-2791450217/",
+        "area": 253.0,
+        "preco_total": 200000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "3f0ee3d8a457a16aa5ea5479b32693cd",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com 336 m² em condomínio com piscina e segurança fechada para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-336m2-venda-RS260000-id-2791449627/",
+        "area": 336.0,
+        "preco_total": 260000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "03ea396978cfee67796dfe2e2b68a966",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com 288 m² em condomínio fechado e com churrasqueira para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-damha-mirassol-iv-mirassol-288m2-venda-RS220000-id-2791449927/",
+        "area": 288.0,
+        "preco_total": 220000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "99b9a1149de213b6402929d964bb4555",
+        "municipio": "Mirassol",
+        "titulo": "Lote/Terreno para comprar com 307 m² em  Terras Alphaville Mirassol, Mirassol",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terras-alphaville-mirassol-mirassol-307m2-venda-RS185000-id-2898317478/",
+        "area": 307.0,
+        "preco_total": 185000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "2fcb2debd6d2ad0347b1f110591fb73d",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-regissol-i-mirassol-200m2-venda-RS130000-id-2882286473/",
+        "area": 200.0,
+        "preco_total": 130000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "d67f5aaf64975635a5a9cbcdb0efac5b",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com 366 m² em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-366m2-venda-RS290000-id-2791448447/",
+        "area": 366.0,
+        "preco_total": 290000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "fed61627fd7f5af0bc9d91050a0dfdde",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-mais-parque-mirassol-mirassol-200m2-venda-RS102900-id-2803071133/",
+        "area": 200.0,
+        "preco_total": 102900.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "aeaaee27dc2e34959c9810c6359faa40",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com 377 m² em condomínio fechado e piscina para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terravista-residence-club-mirassol-377m2-venda-RS310000-id-2791446733/",
+        "area": 377.0,
+        "preco_total": 310000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "43c6ec12864ed5431bbe265e2c45257e",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com condomínio fechado e piscina, 313 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terras-alphaville-mirassol-mirassol-313m2-venda-RS170000-id-2782972462/",
+        "area": 313.0,
+        "preco_total": 170000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "532af213f2e6eda641cd5b6aa3b554be",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 309 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-mirassol-mirassol-309m2-venda-RS350000-id-2874492699/",
+        "area": 309.0,
+        "preco_total": 350000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "a83c720c77eff19b503999fe4f5ced6a",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 310 m² para comprar em condomínio fechado em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-damha-mirassol-iv-mirassol-310m2-venda-RS220000-id-2874491598/",
+        "area": 310.0,
+        "preco_total": 220000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "153c456adc2e88ba5ba38371eddea79c",
+        "municipio": "Mirassol",
+        "titulo": "Lote/Terreno para comprar com 275 m² em  Loteamento Village Damha Mirassol IV, Mirassol",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-damha-mirassol-iv-mirassol-275m2-venda-RS250000-id-2871776081/",
+        "area": 275.0,
+        "preco_total": 250000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "00e3317c9b9900cad0634bf10ea978d9",
+        "municipio": "Mirassol",
+        "titulo": "Lote/Terreno para comprar com 253 m² em  Setlife Mirassol, Mirassol",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS180000-id-2896825374/",
+        "area": 253.0,
+        "preco_total": 180000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "e1744c181caf530740ae3b93324dc70b",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 253 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS200000-id-2894493295/",
+        "area": 253.0,
+        "preco_total": 200000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "7579d1c7b8ade02377e75d5459cd7d8b",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 200 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-mais-parque-mirassol-mirassol-200m2-venda-RS135000-id-2892564700/",
+        "area": 200.0,
+        "preco_total": 135000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "7a714aa83d7cb5204072301cd6b83473",
+        "municipio": "Mirassol",
+        "titulo": "Lote/Terreno para comprar com 253 m² em  Setlife Mirassol, Mirassol",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS195000-id-2823781636/",
+        "area": 253.0,
+        "preco_total": 195000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "c8110dedb9ca356d9a0b012f8c285f56",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-miravista-residencial-mirassol-200m2-venda-RS115000-id-2889497683/",
+        "area": 200.0,
+        "preco_total": 115000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "59d234252cb06bc7a46966f7ef0142e1",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 253 m² em condomínio com piscina e segurança fechada para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS230000-id-2843783616/",
+        "area": 253.0,
+        "preco_total": 230000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "19def73b6f772688fd433c3f5d97bb57",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 377 m² em condomínio com piscina e portaria 24h para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terravista-residence-club-mirassol-377m2-venda-RS368000-id-2759902245/",
+        "area": 377.0,
+        "preco_total": 368000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "f17760694531c4114d4cb1d90241bee9",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial em condomínio com piscina e área de 263 m² para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-263m2-venda-RS190000-id-2874495478/",
+        "area": 263.0,
+        "preco_total": 190000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "a929a5bca9244163fa0b0ad1d66db081",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 250 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-terravista-residence-club-mirassol-250m2-venda-RS190000-id-2877129279/",
+        "area": 250.0,
+        "preco_total": 190000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "9258a71685fb8c3562da74dde29b178d",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 308 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-damha-mirassol-iv-mirassol-308m2-venda-RS231000-id-2874494981/",
+        "area": 308.0,
+        "preco_total": 231000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "355e249a549218e711b476eac2626520",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 307 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-damha-mirassol-iv-mirassol-307m2-venda-RS215000-id-2874493686/",
+        "area": 307.0,
+        "preco_total": 215000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "9ad0fa413f336a3b43729abe2f2a5559",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 253 m² em condomínio com piscina e área fechada para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setlife-mirassol-mirassol-253m2-venda-RS220000-id-2892121301/",
+        "area": 253.0,
+        "preco_total": 220000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "22d640162f2224704088d1bfc74b2008",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-miravista-residencial-mirassol-200m2-venda-RS100000-id-2791450214/",
+        "area": 200.0,
+        "preco_total": 100000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "0277fdd0db78af650cbd164955f05d94",
+        "municipio": "Mirassol",
+        "titulo": "Terreno residencial com 288 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-loteamento-village-damha-mirassol-iv-mirassol-288m2-venda-RS187000-id-2874493496/",
+        "area": 288.0,
+        "preco_total": 187000.0,
+        "localizacao": "Mirassol"
+    },
+    {
+        "id_anuncio": "bb08f1c85f5ac77e1e8e7e7c41d8501c",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Setparque Horizonte, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-setparque-horizonte-sao-jose-do-rio-preto-200m2-venda-RS85000-id-2712478294/",
+        "area": 200.0,
+        "preco_total": 85000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "8ea024c75ea3479f8883f92b4e260c63",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 231 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-maisparque-rio-preto-sao-jose-do-rio-preto-231m2-venda-RS150000-id-2893598396/",
+        "area": 231.0,
+        "preco_total": 150000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "bd30c1299d8230a70f5144b6efa07aa0",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 215 m² em  Eparque Rio Preto Leste, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eparque-rio-preto-leste-sao-jose-do-rio-preto-215m2-venda-RS110000-id-2865795171/",
+        "area": 215.0,
+        "preco_total": 110000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "a58fadb6fa3ba63f0645ed812a963895",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Residencial Setsul II, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-setsul-ii-sao-jose-do-rio-preto-200m2-venda-RS158000-id-2897602479/",
+        "area": 200.0,
+        "preco_total": 158000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "e785aa211787b5d3d4a74bdde9c6c638",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Jardim Leste, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-leste-sao-jose-do-rio-preto-200m2-venda-RS120000-id-2801564762/",
+        "area": 200.0,
+        "preco_total": 120000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "14c833bd6ed289cbcfe829350c2336ff",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 282 m² em  Fazenda Rio Preto, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-fazenda-rio-preto-sao-jose-do-rio-preto-282m2-venda-RS110000-id-2885066381/",
+        "area": 282.0,
+        "preco_total": 110000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "8f95d67cebdcdb5edac93e1d4cfe5270",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 242 m² em  Residencial Setsul II, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-setsul-ii-sao-jose-do-rio-preto-242m2-venda-RS175000-id-2897602673/",
+        "area": 242.0,
+        "preco_total": 175000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "5764388716e26ecae0d5fd7d722d3c41",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 253 m² em  Residencial Maria Júlia, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-maria-julia-sao-jose-do-rio-preto-253m2-venda-RS210000-id-2897053012/",
+        "area": 253.0,
+        "preco_total": 210000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "cd55fefcf414224300e3aa0e3e7b5b86",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-setsul-ii-sao-jose-do-rio-preto-200m2-venda-RS170000-id-2850469925/",
+        "area": 200.0,
+        "preco_total": 170000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "10294384328a120c251b1b51f917da1a",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 200 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-leste-sao-jose-do-rio-preto-200m2-venda-RS110000-id-2894737704/",
+        "area": 200.0,
+        "preco_total": 110000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "c4875e43ea7180c7e91a4bccdb717f89",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 225 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-monterey-sao-jose-do-rio-preto-225m2-venda-RS145000-id-2850470613/",
+        "area": 225.0,
+        "preco_total": 145000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "3c7d279b07732a49d4c73fb6e6579f80",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial disponível para compra com 205 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-vila-verde-sao-jose-do-rio-preto-205m2-venda-RS120000-id-2883119309/",
+        "area": 205.0,
+        "preco_total": 120000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "51cb46096070ff9b90e76565075f212a",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-maisparque-rio-preto-sao-jose-do-rio-preto-200m2-venda-RS150000-id-2732299286/",
+        "area": 200.0,
+        "preco_total": 150000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "0695bf6bf6fe1e2a602b4470ebe07c13",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Jardim Bianco, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-bianco-sao-jose-do-rio-preto-200m2-venda-RS150000-id-2895888371/",
+        "area": 200.0,
+        "preco_total": 150000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "9b00605f9366f47b63447778d09d5807",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial com 242 m² em condomínio com piscina e churrasqueira para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-fazenda-palhinha-zona-rural-sao-jose-do-rio-preto-242m2-venda-RS330000-id-2872218074/",
+        "area": 242.0,
+        "preco_total": 330000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "7cd8ced5610379a38508a8fc0455701c",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 206 m² em  Residencial Ary Attab III, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-ary-attab-iii-sao-jose-do-rio-preto-206m2-venda-RS110000-id-2619487245/",
+        "area": 206.0,
+        "preco_total": 110000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "8994f48b8b95fcf9a07a4358b399892e",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 360 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-bianco-sao-jose-do-rio-preto-360m2-venda-RS320000-id-2879784915/",
+        "area": 360.0,
+        "preco_total": 320000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "95035e01536a76e27d5ab078b9fe3a5a",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 200 m² disponível para venda em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-sao-thomaz-sao-jose-do-rio-preto-200m2-venda-RS135000-id-2894591173/",
+        "area": 200.0,
+        "preco_total": 135000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "6cb5649cfb49793720134e9d34117c45",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 253 m² em condomínio fechado para comprar em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-maria-julia-sao-jose-do-rio-preto-253m2-venda-RS195000-id-2786185084/",
+        "area": 253.0,
+        "preco_total": 195000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "302eb5fadcd6cc7a0fbbba1b684e67a6",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 206 m² em  Residencial Ary Attab III, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-ary-attab-iii-sao-jose-do-rio-preto-206m2-venda-RS115000-id-2897841192/",
+        "area": 206.0,
+        "preco_total": 115000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "f37cb27a059740698b954992320d1c22",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 243 m² em  Eplatz Rio Preto, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eplatz-rio-preto-sao-jose-do-rio-preto-243m2-venda-RS95000-id-2768431523/",
+        "area": 243.0,
+        "preco_total": 95000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "f3a0cb16b7d4b5b998a890393900a12d",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 200 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-marambaia-sao-jose-do-rio-preto-200m2-venda-RS112900-id-2871051203/",
+        "area": 200.0,
+        "preco_total": 112900.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "31f042fb99cb9f4d790b3bf037f2c7eb",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial disponível para compra com área de 200 m² em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-eplatz-rio-preto-sao-jose-do-rio-preto-200m2-venda-RS116000-id-2844939813/",
+        "area": 200.0,
+        "preco_total": 116000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "12321c81b92372519d0cad7204c1e9ff",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 295 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-residencial-palestra-sao-jose-do-rio-preto-295m2-venda-RS140000-id-2570278354/",
+        "area": 295.0,
+        "preco_total": 140000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "94fd5060e086e0cba6bd9d6b7faf40ef",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 250 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-simoes-sao-jose-do-rio-preto-250m2-venda-RS150000-id-2866940855/",
+        "area": 250.0,
+        "preco_total": 150000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "787a07ca488e391f0feff581990a440d",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 200 m² em  Jardim São Bento, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-sao-bento-sao-jose-do-rio-preto-200m2-venda-RS84000-id-2898426276/",
+        "area": 200.0,
+        "preco_total": 84000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "70a3a0d7057b291fac2978d705e1feda",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 222 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-jardim-leste-sao-jose-do-rio-preto-222m2-venda-RS92000-id-2871176728/",
+        "area": 222.0,
+        "preco_total": 92000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "3f736d97d0e68c66d0082b3e467c088a",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Terreno residencial de 225 m² disponível para compra em",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-parque-residencial-damha-v-sao-jose-do-rio-preto-225m2-venda-RS87000-id-2882445795/",
+        "area": 225.0,
+        "preco_total": 87000.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "22145adfcbfc7217f607720b0de4932a",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 405 m² em  Iguatemi, São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-iguatemi-sao-jose-do-rio-preto-405m2-venda-RS540270-id-2841184153/",
+        "area": 405.0,
+        "preco_total": 540270.0,
+        "localizacao": "São José do Rio Preto"
+    },
+    {
+        "id_anuncio": "3346e34541cd5a702f8201a10d06aaaf",
+        "municipio": "Sao-jose-do-rio-preto",
+        "titulo": "Lote/Terreno para comprar com 202 m² em  Chácaras de Recreio Felicidade (Zona Rural), São José do Rio Preto",
+        "url": "https://www.vivareal.com.br/imovel/lote-terreno-chacaras-de-recreio-felicidade-zona-rural-sao-jose-do-rio-preto-202m2-venda-RS115000-id-2898257377/",
+        "area": 202.0,
+        "preco_total": 115000.0,
+        "localizacao": "São José do Rio Preto"
+    }
+]
