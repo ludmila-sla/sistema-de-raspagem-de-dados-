@@ -196,27 +196,82 @@ def processar_html_vivareal(html_content, municipio):
     dados_extraidos = []
 
     soup = BeautifulSoup(html_content, "html.parser")
-    scripts = soup.find_all("script", type="application/ld+json")
+    scripts = soup.select('script[type="application/ld+json"]')
 
     for script in scripts:
 
-        if not script.string:
-            continue
-
         try:
 
-            payload = json.loads(script.string)
+            conteudo = script.get_text(strip=True)
+
+            if not conteudo:
+                continue
+
+            payload = json.loads(conteudo)
 
             produtos = []
 
-            if isinstance(payload, dict):
+        
+            if (
+                isinstance(payload, dict)
+                and payload.get("@type") == "Product"
+            ):
+                produtos.append(payload)
 
-                if payload.get("@type") == "Product":
-                    produtos = [payload]
 
-                elif payload.get("@type") == "ItemList":
+            elif (
+                isinstance(payload, dict)
+                and payload.get("@type") == "ItemList"
+            ):
 
-                    for item in payload.get("itemListElement", []):
+                for item in payload.get("itemListElement", []):
+
+                    if (
+                        isinstance(item, dict)
+                        and isinstance(item.get("item"), dict)
+                    ):
+                        produtos.append(item["item"])
+
+
+            elif (
+                isinstance(payload, dict)
+                and "@graph" in payload
+            ):
+
+                for obj in payload["@graph"]:
+
+                    if obj.get("@type") == "Product":
+                        produtos.append(obj)
+
+                    elif obj.get("@type") == "ItemList":
+
+                        for item in obj.get("itemListElement", []):
+
+                            if (
+                                isinstance(item, dict)
+                                and isinstance(item.get("item"), dict)
+                            ):
+                                produtos.append(item["item"])
+
+            elif (
+                isinstance(payload, dict)
+                and "mainEntity" in payload
+            ):
+
+                entity = payload["mainEntity"]
+
+                if (
+                    isinstance(entity, dict)
+                    and entity.get("@type") == "Product"
+                ):
+                    produtos.append(entity)
+
+                elif (
+                    isinstance(entity, dict)
+                    and entity.get("@type") == "ItemList"
+                ):
+
+                    for item in entity.get("itemListElement", []):
 
                         if (
                             isinstance(item, dict)
@@ -229,49 +284,46 @@ def processar_html_vivareal(html_content, municipio):
 
                 url_completa = produto.get("url", "").strip()
 
-                id_anuncio = None
+                if not url_completa:
+                    continue
 
-                if url_completa:
-                    id_anuncio = hashlib.md5(
-                        url_completa.encode("utf-8")
-                    ).hexdigest()
+                id_anuncio = hashlib.md5(
+                    url_completa.encode("utf-8")
+                ).hexdigest()
 
                 endereco = produto.get("address", {})
 
-                dados_ad = {
+                area = None
+                if produto.get("floorSize"):
+                    area = tratar_valor_numerico(
+                        "area",
+                        produto["floorSize"].get("value")
+                    )
+
+                preco = None
+                if produto.get("offers"):
+                    preco = tratar_valor_numerico(
+                        "preco_total",
+                        produto["offers"].get("price")
+                    )
+
+                dados_extraidos.append({
 
                     "id_anuncio": id_anuncio,
-
                     "municipio": municipio,
-
                     "titulo": produto.get("name", "").strip(),
-
                     "url": url_completa,
-
-                    "area": tratar_valor_numerico(
-                        "area",
-                        produto.get("floorSize", {}).get("value")
-                    ),
-
-                    "preco_total": tratar_valor_numerico(
-                        "preco_total",
-                        produto.get("offers", {}).get("price")
-                    ),
-
+                    "area": area,
+                    "preco_total": preco,
                     "localizacao": endereco.get(
                         "addressLocality",
                         municipio
                     ).strip()
 
-                }
-
-                if id_anuncio:
-                    dados_extraidos.append(dados_ad)
+                })
 
         except Exception as e:
-            logging.warning(
-                f"Erro ao fazer o parse do JSON LD do VivaReal: {e}"
-            )
+            logging.warning(f"Erro ao fazer o parse do JSON LD do VivaReal: {e}")
 
     return dados_extraidos
 
