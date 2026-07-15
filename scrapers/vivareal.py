@@ -22,7 +22,7 @@ def normalizar_string(texto):
 
 def gerar_url_vivareal(municipio_slug):
     """Gera a URL do VivaReal focada exclusivamente em venda de Lotes e Terrenos."""
-    return f"https://www.vivareal.com.br/venda/sp/{municipio_slug}//lote-terreno_residencial/"
+    return f"https://www.vivareal.com.br/venda/sp/{municipio_slug}/lote-terreno_residencial/"
 
 def executar_scraping_vivareal(estrutura_aps):
     if not API_KEY:
