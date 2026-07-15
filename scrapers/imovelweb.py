@@ -32,7 +32,7 @@ def executar_scraping_imovelweb(estrutura_aps):
     for microregiao, municipios in estrutura_aps.items():
         for municipio in municipios:
             municipio_slug = normalizar_string(municipio)
-            url_busca = f"https://www.imovelweb.com.br/imoveis-{municipio_slug}-sp.html"
+            url_busca = f"https://www.imovelweb.com.br/terrenos-{municipio_slug}-sp.html"
             
             logging.info(f"Requisitando: {municipio} -> URL: {url_busca}")
             
