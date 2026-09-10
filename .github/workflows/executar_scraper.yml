@@ -3,7 +3,7 @@ name: Executar Scraping e Processamento Real
 on:
   schedule:
     # Scraper mensal
-    - cron: '0 16 13 * *'
+    - cron: '0 16 20 * *'
 
     # Mantém o Supabase ativo
     - cron: '0 12 * * 1,3,5'
