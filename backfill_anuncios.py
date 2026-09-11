@@ -16,7 +16,9 @@ from utils.normalizador import tratar_valor_numerico
 PASTA_PROCESSED = Path("data/processed")
 PADRAO_ARQUIVO = re.compile(r"^(?P<site>[a-z0-9_-]+)_dados_(?P<data>\d{4}-\d{2}-\d{2})\.json$", re.I)
 PADRAO_PRECO_TEXTO = re.compile(r"R\$\s*([\d.]+(?:,\d{1,2})?)", re.I)
+
 TOLERANCIA_PRECO = 0.05
+TAMANHO_LOTE = 50
 
 
 def texto_valido(valor):
@@ -57,8 +59,6 @@ def aproximadamente_mil_vezes(preco_atual, preco_texto):
 
 
 def preco_recuperavel(registro, anuncio, site):
-    # Por segurança, a correção automática de preços antigos fica restrita à OLX.
-    # Nos JSONs antigos dos demais sites o texto pode conter outros valores em R$.
     if site.lower() != "olx":
         return None
 
@@ -68,13 +68,9 @@ def preco_recuperavel(registro, anuncio, site):
 
     preco_atual = registro.preco_total
 
-    # Se o banco não tem preço e o título da OLX traz explicitamente "R$ ...",
-    # usamos esse valor.
     if preco_atual is None:
         return preco_texto
 
-    # Corrige apenas o padrão conhecido da raspagem antiga:
-    # 110.0 -> 110000.0, 39.999 -> ~39999 etc.
     if preco_atual < 10000 and aproximadamente_mil_vezes(preco_atual, preco_texto):
         return preco_texto
 
@@ -132,6 +128,21 @@ def preencher_data_se_vazia(registro, atributo, valor):
     return True
 
 
+def salvar_lote(session, aplicar, pendentes):
+    if pendentes == 0:
+        return 0
+
+    if aplicar:
+        session.commit()
+        print(f"[LOTE] {pendentes} registro(s) gravado(s).")
+    else:
+        # No dry-run não fazemos flush nem commit.
+        # As alterações ficam apenas na sessão e serão descartadas no final.
+        pass
+
+    return 0
+
+
 def processar(aplicar=False):
     resumo = {
         "arquivos": 0,
@@ -145,14 +156,17 @@ def processar(aplicar=False):
         "datas_publicacao_preenchidas": 0,
         "cidades_busca_preenchidas": 0,
         "textos_preenchidos": 0,
-        "enderecos_preenchidos": 0
+        "enderecos_preenchidos": 0,
+        "lotes_gravados": 0
     }
 
     ids_encontrados = set()
     ids_nao_encontrados = set()
     ids_alterados = set()
 
-    with Session(engine) as session:
+    pendentes = 0
+
+    with Session(engine, autoflush=False) as session:
         for caminho, site, data_lote in carregar_arquivos():
             resumo["arquivos"] += 1
 
@@ -169,7 +183,10 @@ def processar(aplicar=False):
                 if not id_anuncio:
                     continue
 
-                registro = session.scalar(select(Anuncio).where(Anuncio.id_anuncio == id_anuncio))
+                with session.no_autoflush:
+                    registro = session.scalar(
+                        select(Anuncio).where(Anuncio.id_anuncio == id_anuncio)
+                    )
 
                 if registro is None:
                     ids_nao_encontrados.add(id_anuncio)
@@ -216,13 +233,23 @@ def processar(aplicar=False):
 
                 if alterado:
                     ids_alterados.add(registro.id)
+                    pendentes += 1
+
+                    if aplicar and pendentes >= TAMANHO_LOTE:
+                        session.commit()
+                        resumo["lotes_gravados"] += 1
+                        print(f"[LOTE] {pendentes} alteração(ões) gravada(s).")
+                        pendentes = 0
 
         resumo["registros_encontrados_banco"] = len(ids_encontrados)
         resumo["registros_nao_encontrados"] = len(ids_nao_encontrados)
         resumo["registros_alterados"] = len(ids_alterados)
 
         if aplicar:
-            session.commit()
+            if pendentes > 0:
+                session.commit()
+                resumo["lotes_gravados"] += 1
+                print(f"[LOTE] {pendentes} alteração(ões) gravada(s).")
         else:
             session.rollback()
 
@@ -239,7 +266,7 @@ def processar(aplicar=False):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Recupera dados antigos dos JSONs processados e corrige preços apenas quando houver evidência forte."
+        description="Recupera dados antigos dos JSONs processados em lotes pequenos e corrige preços apenas quando houver evidência forte."
     )
     parser.add_argument(
         "--aplicar",
