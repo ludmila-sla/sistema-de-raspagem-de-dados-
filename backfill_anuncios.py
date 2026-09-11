@@ -9,12 +9,14 @@ from sqlalchemy.orm import Session
 
 from database.connection import engine
 from database.models import Anuncio
+from database.repository import converter_data
 from utils.normalizador import tratar_valor_numerico
 
 
 PASTA_PROCESSED = Path("data/processed")
 PADRAO_ARQUIVO = re.compile(r"^(?P<site>[a-z0-9_-]+)_dados_(?P<data>\d{4}-\d{2}-\d{2})\.json$", re.I)
 PADRAO_PRECO_TEXTO = re.compile(r"R\$\s*([\d.]+(?:,\d{1,2})?)", re.I)
+TOLERANCIA_PRECO = 0.05
 
 
 def texto_valido(valor):
@@ -25,44 +27,56 @@ def texto_valido(valor):
     return texto or None
 
 
-def extrair_preco_texto(*valores):
-    for valor in valores:
-        texto = texto_valido(valor)
-        if not texto:
-            continue
+def extrair_preco_titulo(titulo):
+    titulo = texto_valido(titulo)
+    if not titulo:
+        return None
 
-        match = PADRAO_PRECO_TEXTO.search(texto)
-        if not match:
-            continue
+    match = PADRAO_PRECO_TEXTO.search(titulo)
+    if not match:
+        return None
 
-        preco = tratar_valor_numerico("preco_total", match.group(1))
-        if preco is not None and preco > 0:
-            return preco
+    preco = tratar_valor_numerico("preco_total", match.group(1))
+    if preco is not None and preco > 0:
+        return preco
 
     return None
 
 
-def preco_recuperavel(registro, anuncio):
+def aproximadamente_mil_vezes(preco_atual, preco_texto):
+    if preco_atual is None or preco_atual <= 0:
+        return False
+
+    esperado = preco_atual * 1000
+
+    if esperado <= 0:
+        return False
+
+    diferenca_relativa = abs(preco_texto - esperado) / esperado
+    return diferenca_relativa <= TOLERANCIA_PRECO
+
+
+def preco_recuperavel(registro, anuncio, site):
+    # Por segurança, a correção automática de preços antigos fica restrita à OLX.
+    # Nos JSONs antigos dos demais sites o texto pode conter outros valores em R$.
+    if site.lower() != "olx":
+        return None
+
+    preco_texto = extrair_preco_titulo(anuncio.get("titulo"))
+    if preco_texto is None or preco_texto < 10000:
+        return None
+
     preco_atual = registro.preco_total
 
-    # Primeiro tenta recuperar o valor escrito por extenso no título/texto.
-    preco_texto = extrair_preco_texto(
-        anuncio.get("titulo"),
-        anuncio.get("texto_anuncio")
-    )
+    # Se o banco não tem preço e o título da OLX traz explicitamente "R$ ...",
+    # usamos esse valor.
+    if preco_atual is None:
+        return preco_texto
 
-    if preco_texto is not None:
-        if preco_atual is None:
-            return preco_texto
-
-        # Corrige valores antigos como 110.0 quando o texto diz R$ 110.000,00.
-        if preco_atual < 10000 <= preco_texto:
-            return preco_texto
-
-    # Se o JSON já possuir um preço plausível, pode preencher apenas campos NULL.
-    preco_json = anuncio.get("preco_total")
-    if preco_atual is None and isinstance(preco_json, (int, float)) and preco_json >= 10000:
-        return float(preco_json)
+    # Corrige apenas o padrão conhecido da raspagem antiga:
+    # 110.0 -> 110000.0, 39.999 -> ~39999 etc.
+    if preco_atual < 10000 and aproximadamente_mil_vezes(preco_atual, preco_texto):
+        return preco_texto
 
     return None
 
@@ -106,22 +120,37 @@ def preencher_se_vazio(registro, atributo, valor):
     return False
 
 
+def preencher_data_se_vazia(registro, atributo, valor):
+    if getattr(registro, atributo) is not None:
+        return False
+
+    data = converter_data(valor)
+    if data is None:
+        return False
+
+    setattr(registro, atributo, data)
+    return True
+
+
 def processar(aplicar=False):
     resumo = {
         "arquivos": 0,
         "itens_json": 0,
-        "encontrados_banco": 0,
-        "nao_encontrados": 0,
+        "registros_encontrados_banco": 0,
+        "registros_nao_encontrados": 0,
         "registros_alterados": 0,
         "precos_recuperados": 0,
         "titulos_preenchidos": 0,
         "urls_preenchidas": 0,
+        "datas_publicacao_preenchidas": 0,
         "cidades_busca_preenchidas": 0,
         "textos_preenchidos": 0,
         "enderecos_preenchidos": 0
     }
 
-    vistos = set()
+    ids_encontrados = set()
+    ids_nao_encontrados = set()
+    ids_alterados = set()
 
     with Session(engine) as session:
         for caminho, site, data_lote in carregar_arquivos():
@@ -140,20 +169,13 @@ def processar(aplicar=False):
                 if not id_anuncio:
                     continue
 
-                chave = (site, id_anuncio)
-                if chave in vistos:
-                    continue
-
-                registro = session.scalar(
-                    select(Anuncio).where(Anuncio.id_anuncio == id_anuncio)
-                )
+                registro = session.scalar(select(Anuncio).where(Anuncio.id_anuncio == id_anuncio))
 
                 if registro is None:
-                    resumo["nao_encontrados"] += 1
+                    ids_nao_encontrados.add(id_anuncio)
                     continue
 
-                vistos.add(chave)
-                resumo["encontrados_banco"] += 1
+                ids_encontrados.add(id_anuncio)
                 alterado = False
 
                 if preencher_se_vazio(registro, "titulo", anuncio.get("titulo")):
@@ -162,6 +184,10 @@ def processar(aplicar=False):
 
                 if preencher_se_vazio(registro, "url", anuncio.get("url")):
                     resumo["urls_preenchidas"] += 1
+                    alterado = True
+
+                if preencher_data_se_vazia(registro, "data_publicacao", anuncio.get("data_publicacao")):
+                    resumo["datas_publicacao_preenchidas"] += 1
                     alterado = True
 
                 if preencher_se_vazio(registro, "cidade_busca", anuncio.get("municipio")):
@@ -176,27 +202,24 @@ def processar(aplicar=False):
                     resumo["enderecos_preenchidos"] += 1
                     alterado = True
 
-                novo_preco = preco_recuperavel(registro, anuncio)
+                novo_preco = preco_recuperavel(registro, anuncio, site)
 
                 if novo_preco is not None and novo_preco != registro.preco_total:
                     preco_anterior = registro.preco_total
                     registro.preco_total = novo_preco
-                    registro.preco_m2 = (
-                        novo_preco / registro.area
-                        if registro.area is not None and registro.area > 0
-                        else None
-                    )
+                    registro.preco_m2 = novo_preco / registro.area if registro.area is not None and registro.area > 0 else None
 
                     resumo["precos_recuperados"] += 1
                     alterado = True
 
-                    print(
-                        f"[PREÇO] id={registro.id} | {site} | "
-                        f"{preco_anterior} -> {novo_preco}"
-                    )
+                    print(f"[PREÇO] id={registro.id} | {site} | {preco_anterior} -> {novo_preco}")
 
                 if alterado:
-                    resumo["registros_alterados"] += 1
+                    ids_alterados.add(registro.id)
+
+        resumo["registros_encontrados_banco"] = len(ids_encontrados)
+        resumo["registros_nao_encontrados"] = len(ids_nao_encontrados)
+        resumo["registros_alterados"] = len(ids_alterados)
 
         if aplicar:
             session.commit()
@@ -205,6 +228,7 @@ def processar(aplicar=False):
 
     print("\n===== RESUMO DO BACKFILL =====")
     print(f"Modo: {'APLICAR' if aplicar else 'DRY-RUN'}")
+
     for chave, valor in resumo.items():
         print(f"{chave}: {valor}")
 
@@ -215,7 +239,7 @@ def processar(aplicar=False):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Recupera dados antigos dos JSONs processados e corrige preços quando houver evidência no texto."
+        description="Recupera dados antigos dos JSONs processados e corrige preços apenas quando houver evidência forte."
     )
     parser.add_argument(
         "--aplicar",
