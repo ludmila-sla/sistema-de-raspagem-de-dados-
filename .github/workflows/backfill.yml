@@ -34,7 +34,7 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           if [ "${{ inputs.aplicar }}" = "true" ]; then
-            python backfill_anuncios.py --aplicar
+            python backfill_campos_seguros.py --aplicar
           else
-            python backfill_anuncios.py
+            python backfill_campos_seguros.py
           fi
