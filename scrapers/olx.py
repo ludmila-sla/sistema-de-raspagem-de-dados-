@@ -12,8 +12,8 @@ logging.basicConfig(
     filemode="a"
 )
 
-API_KEY = os.environ.get("SCRAPINGBEE_API_KEY")
-URL_GATEWAY = "https://app.scrapingbee.com/api/v1/"
+API_KEY = os.environ.get("SCRAPINGANT_API_KEY")
+URL_GATEWAY = "https://api.scrapingant.com/v2/general"
 
 _REGIOES_OLX = {
     "bauru": "regiao-de-bauru-e-marilia",
