@@ -12,8 +12,8 @@ logging.basicConfig(
     filemode="a"
 )
 
-API_KEY = os.environ.get("SCRAPINGBEE_API_KEY")
-URL_GATEWAY = "https://app.scrapingbee.com/api/v1/"
+API_KEY = os.environ.get("SCRAPINGANT_API_KEY")
+URL_GATEWAY = "https://api.scrapingant.com/v2/general"
 
 def normalizar_slug_zap(texto):
     import unicodedata
