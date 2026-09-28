@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Fazer consulta via API do Supabase
         env:
-          SUPABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
         run: |
           echo "Verificando Supabase..."
