@@ -13,22 +13,29 @@ on:
 
 jobs:
 
- 
+  # ==========================================
+  # MANTER SUPABASE ATIVO
+  # ==========================================
   manter-supabase-ativo:
     if: github.event.schedule == '0 12 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
-    - name: Testar tabela anuncios
-  env:
-    SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-    SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
-  run: |
-    curl -i \
-      "$SUPABASE_URL/rest/v1/anuncios?select=id&limit=1" \
-      -H "apikey: $SUPABASE_KEY"
+      - name: Testar tabela anuncios
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          echo "Verificando Supabase..."
+
+          curl -i \
+            "$SUPABASE_URL/rest/v1/anuncios?select=id&limit=1" \
+            -H "apikey: $SUPABASE_KEY"
+
+          echo ""
+          echo "Consulta finalizada."
 
   # ==========================================
   # SCRAPER E PROCESSAMENTO
   # ==========================================
-
+  
