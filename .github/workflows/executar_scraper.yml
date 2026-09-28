@@ -21,29 +21,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Consultar Supabase
+      - name: Fazer consulta via API do Supabase
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
         run: |
           echo "Verificando Supabase..."
 
-          RESPONSE=$(curl --silent --show-error \
-            --write-out "\nHTTP_STATUS:%{http_code}" \
+          curl --fail --show-error \
             "$SUPABASE_URL/rest/v1/anuncios?select=id&limit=1" \
-            -H "apikey: $SUPABASE_KEY")
+            -H "apikey: $SUPABASE_KEY"
 
-          echo "$RESPONSE"
-
-          STATUS=$(echo "$RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
-
-          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 300 ]; then
-            echo "Supabase acessado com sucesso."
-          else
-            echo "Erro ao acessar Supabase. HTTP $STATUS"
-            exit 1
-          fi
-
-  # ==========================================
-  # SCRAPER E PROCESSAMENTO
-  # ==========================================
+          echo ""
+          echo "Supabase acessado com sucesso."
