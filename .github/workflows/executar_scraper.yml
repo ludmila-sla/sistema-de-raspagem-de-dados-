@@ -13,9 +13,7 @@ on:
 
 jobs:
 
-  # ==========================================
-  # MANTER SUPABASE ATIVO
-  # ==========================================
+ 
   manter-supabase-ativo:
     if: github.event.schedule == '0 12 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
