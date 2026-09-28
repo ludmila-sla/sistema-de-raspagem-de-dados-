@@ -19,19 +19,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Fazer consulta via API do Supabase
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
-        run: |
-          echo "Verificando Supabase..."
-
-          curl --fail --show-error \
-            "$SUPABASE_URL/rest/v1/anuncios?select=id&limit=1" \
-            -H "apikey: $SUPABASE_KEY"
-
-          echo ""
-          echo "Supabase acessado com sucesso."
+    - name: Testar tabela anuncios
+  env:
+    SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+    SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+  run: |
+    curl -i \
+      "$SUPABASE_URL/rest/v1/anuncios?select=id&limit=1" \
+      -H "apikey: $SUPABASE_KEY"
 
   # ==========================================
   # SCRAPER E PROCESSAMENTO
