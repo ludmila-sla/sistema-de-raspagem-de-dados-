@@ -1,92 +1,112 @@
 # Sistema de Raspagem de Dados Imobiliários
 
-Pipeline de coleta, processamento e persistência de anúncios imobiliários dos portais **OLX**, **ZAP Imóveis**, **VivaReal** e **Imovelweb**, voltado às áreas de estudo definidas no projeto.
+Pipeline automatizado para coleta, processamento, normalização e armazenamento de anúncios de terrenos dos portais **OLX**, **ZAP Imóveis**, **Viva Real** e **Imovelweb**. O sistema foi desenvolvido para apoiar pesquisas territoriais a partir da construção e atualização periódica de uma base de dados imobiliários.
 
-O sistema separa a **coleta do HTML** do **processamento dos anúncios**. Isso permite reprocessar lotes já coletados sem consumir novamente créditos do ScrapingBee.
+O projeto separa a **aquisição do HTML** do **processamento dos anúncios**. Dessa forma, lotes já coletados podem ser reprocessados sem realizar novas requisições aos portais.
 
-## Arquitetura
+## Fluxo geral
 
 ```text
+Portais imobiliários
+        ↓
+Aquisição das páginas via ScrapingAnt
+        ↓
+HTML bruto (data/raw)
+        ↓
+Extração e processamento
+        ↓
+JSON processado (data/processed)
+        ↓
+Normalização e cálculo de campos derivados
+        ↓
+PostgreSQL / Supabase
+        ↓
+Identificação de duplicidades na base
+        ↓
+Google Planilhas
+        ↓
+Consulta e enriquecimento manual pelos pesquisadores
+```
+
+## Estrutura do projeto
+
+```text
+├── .github/
+│   └── workflows/             # Automação da coleta, processamento e testes
 ├── config/
-│   ├── cidades.py            # Municípios e arranjos populacionais pesquisados
-│   ├── filtros.py            # Filtros utilizados pelos scrapers
-│   └── sites.py              # Ativa/desativa cada portal
+│   ├── cidades.py             # Municípios e arranjos populacionais pesquisados
+│   ├── filtros.py             # Filtros utilizados pelos scrapers
+│   └── sites.py               # Ativa/desativa cada portal
 ├── data/
-│   ├── raw/                  # HTML bruto coletado por site/data/município
-│   └── processed/            # JSON normalizado gerado pelo processamento
+│   ├── raw/                   # HTML bruto por site/data/município
+│   └── processed/             # JSON gerado após o processamento
 ├── database/
-│   ├── connection.py         # Conexão SQLAlchemy via DATABASE_URL
-│   ├── models.py             # Modelos das tabelas anuncios e logs
-│   └── repository.py         # Persistência e cálculos derivados
-├── logs_processamento/       # Logs do parser/processamento
+│   ├── connection.py          # Conexão SQLAlchemy via DATABASE_URL
+│   ├── models.py              # Modelos das tabelas locais
+│   └── repository.py          # Persistência e cálculos derivados
+├── logs_processamento/        # Logs do processamento
 ├── scrapers/
 │   ├── imovelweb.py
 │   ├── olx.py
 │   ├── vivareal.py
 │   └── zap.py
-├── tests/
-│   └── test_processamento.py # Testes locais sem acessar o ScrapingBee
+├── tests/                     # Testes dos parsers e do processamento
 ├── utils/
-│   └── normalizador.py       # Normalização de textos e números
-├── main.py                   # Executa somente a coleta dos HTMLs
-├── processar_dados.py        # Processa lotes existentes e persiste os dados
-└── requeriments.txt          # Dependências Python do projeto
+│   └── normalizador.py        # Normalização de textos e valores numéricos
+├── main.py                    # Orquestra a aquisição dos HTMLs
+├── processar_dados.py         # Processa os lotes e persiste os dados
+└── requeriments.txt           # Dependências Python
 ```
 
-## Fluxo do sistema
+## Áreas pesquisadas
 
-### 1. Coleta
+Os municípios atualmente configurados em `config/cidades.py` são:
 
-A coleta é iniciada por:
+- **Bauru:** Bauru e Piratininga;
+- **São José do Rio Preto:** São José do Rio Preto, Bady Bassit, Cedral, Guapiaçu e Mirassol;
+- **São José dos Campos:** São José dos Campos, Caçapava e Jacarei;
+- **Sorocaba:** Sorocaba, Araçoiaba da Serra, Aluminio e Votarantim.
+
+A configuração pode ser alterada conforme o recorte territorial da pesquisa.
+
+## 1. Aquisição das páginas
+
+A coleta pode ser iniciada por:
 
 ```bash
 python main.py
 ```
 
-O `main.py` percorre os sites habilitados em `config/sites.py` e os municípios configurados em `config/cidades.py`.
+O `main.py` percorre os sites habilitados em `config/sites.py` e os municípios definidos em `config/cidades.py`.
 
-Os scrapers utilizam o ScrapingBee para obter as páginas de resultados. O HTML recebido é salvo sem tratamento em:
+Os quatro scrapers utilizam atualmente a **ScrapingAnt** como gateway para obtenção das páginas. Cada resposta HTML bem-sucedida é preservada em:
 
 ```text
 data/raw/<site>/<AAAA-MM-DD>/<municipio>.html
 ```
 
-A coleta e o processamento são independentes. Portanto, **não é necessário fazer uma nova requisição ao ScrapingBee para testar ou reprocessar um lote que já possua HTML salvo**.
+A preservação do HTML bruto permite reprocessar uma coleta sem repetir a aquisição da página.
 
-### 2. Processamento
+## 2. Processamento e extração
 
-O processamento é iniciado por:
+O processamento pode ser executado separadamente:
 
 ```bash
 python processar_dados.py
 ```
 
-O script solicita a data do lote no formato `AAAA-MM-DD` e processa os arquivos existentes em `data/raw`.
+O script solicita a data do lote no formato `AAAA-MM-DD`. Se nenhuma data for informada, utiliza a data atual.
 
-O processamento utiliza BeautifulSoup e, quando disponível, os metadados LD+JSON presentes na própria página de resultados.
+As estratégias de extração variam conforme a estrutura de cada portal:
 
-**O sistema não acessa a página individual de cada imóvel para obter `texto_anuncio`.** Esse campo representa o texto disponível no card/listagem já coletado.
-
-Para cada anúncio, o pipeline tenta obter:
-
-| Campo | Descrição |
+| Portal | Estratégia principal de extração |
 | --- | --- |
-| `id_anuncio` | Identificador estável utilizado pelo sistema |
-| `data_busca` | Data do lote/coleta |
-| `data_publicacao` | Data de publicação quando disponível no portal |
-| `titulo` | Título apresentado na listagem |
-| `texto_anuncio` | Texto completo disponível no card/listagem |
-| `url` | URL do anúncio |
-| `endereco` | Localização/endereço extraído do anúncio |
-| `cidade` | Cidade normalizada do anúncio |
-| `cidade_busca` | Município utilizado originalmente na pesquisa |
-| `area` | Área do imóvel em m² |
-| `preco_total` | Preço total anunciado |
-| `preco_m2` | Preço por m² calculado pelo sistema |
-| `tipo_imovel` | Tipo inferido a partir do título quando possível |
-| `site` | Portal de origem |
-| `hash_conteudo` | Hash usado para rastreabilidade do conteúdo |
-| `criado_em` | Data/hora de criação do registro no banco |
+| OLX | Parsing dos cards da página HTML com BeautifulSoup |
+| ZAP Imóveis | Dados estruturados LD+JSON (`ItemList`) |
+| Viva Real | Dados estruturados LD+JSON (`Product`, `ItemList`, `@graph` e `mainEntity`) |
+| Imovelweb | Parsing dos cards da página HTML com BeautifulSoup |
+
+O sistema trabalha com as páginas de resultados coletadas. Ele **não acessa individualmente cada página de imóvel para obter o texto do anúncio**. O campo `texto_anuncio` contém o texto disponível no card/listagem ou nos dados estruturados encontrados na página coletada.
 
 Os dados processados também são gravados em:
 
@@ -94,49 +114,59 @@ Os dados processados também são gravados em:
 data/processed/<site>_dados_<AAAA-MM-DD>.json
 ```
 
-## Banco de dados
+## Campos coletados e derivados
 
-A conexão é feita pelo SQLAlchemy utilizando a variável de ambiente:
+A tabela `anuncios` utilizada no ambiente do projeto contém os seguintes campos:
 
-```bash
-export DATABASE_URL="postgresql://usuario:senha@host:porta/banco"
-```
+| Campo | Descrição |
+| --- | --- |
+| `id` | Identificador interno do registro |
+| `id_anuncio` | Identificador estável do anúncio |
+| `data_busca` | Data da coleta/lote |
+| `data_publicacao` | Data de publicação, quando disponível |
+| `titulo` | Título do anúncio |
+| `texto_anuncio` | Texto disponível na listagem |
+| `url` | URL do anúncio |
+| `endereco` | Localização/endereço extraído |
+| `cidade` | Município associado ao registro |
+| `cidade_busca` | Município utilizado na busca |
+| `area` | Área em m² |
+| `preco_total` | Preço total anunciado |
+| `preco_m2` | Preço por m² calculado pelo sistema |
+| `tipo_imovel` | Tipo de imóvel inferido quando possível |
+| `site` | Portal de origem |
+| `hash_conteudo` | Hash SHA-256 calculado a partir de atributos do anúncio |
+| `duplicado_de_id` | Referência ao registro considerado original quando a base classifica o anúncio como duplicado |
+| `criado_em` | Data/hora de criação do registro |
 
-No ambiente do projeto, o PostgreSQL pode ser hospedado no Supabase.
+> `duplicado_de_id` existe na base PostgreSQL/Supabase utilizada pelo projeto, mas não faz parte atualmente do modelo SQLAlchemy definido em `database/models.py`. A classificação de duplicidade é realizada na camada da base de dados, e não pelo parser Python.
 
-A tabela principal é `anuncios`.
+Os campos `titulo`, `texto_anuncio`, `url` e `data_publicacao` foram incorporados ao pipeline após as primeiras coletas. Por isso, registros históricos podem não possuir valores nesses campos.
 
-Os campos `data_busca` e `data_publicacao` continuam sendo armazenados como tipos de data no PostgreSQL. Para exibição em padrão brasileiro (`DD/MM/AAAA`), recomenda-se utilizar a view de apresentação `anuncios_br` ou formatar os campos na camada de exportação/visualização.
+## Identificação dos anúncios
 
-> O formato visual de uma coluna `DATE` não é alterado por trigger. Manter o tipo `DATE` preserva filtros, ordenação e operações de data.
+O método de obtenção de `id_anuncio` depende da plataforma:
 
-## Tratamento de localização
+- **OLX:** hash MD5 da URL;
+- **ZAP Imóveis:** hash MD5 da URL;
+- **Viva Real:** hash MD5 da URL;
+- **Imovelweb:** identificador `data-id` fornecido pelo próprio card.
 
-A pesquisa de um portal pode ser feita por uma região maior do que o município real do imóvel. Por isso, o projeto diferencia:
+Antes de inserir um registro, `database/repository.py` consulta a existência do mesmo `id_anuncio`. Caso ele já esteja armazenado, uma nova linha não é criada.
 
-- `cidade_busca`: município usado para realizar a busca;
-- `cidade`: município identificado/normalizado a partir da localização do anúncio;
-- `endereco`: restante da localização do imóvel.
+Essa regra evita reinserções do mesmo identificador, mas significa que o modelo atual **não mantém observações históricas repetidas do mesmo anúncio em diferentes meses**. Caso a pesquisa passe a exigir acompanhamento de alterações de preço ou tempo de permanência do mesmo anúncio, será necessário adotar uma tabela de histórico/observações ou permitir múltiplos registros por `id_anuncio` e data.
 
-Quando a localização não permite determinar a cidade com segurança, o sistema mantém a informação disponível sem inventar um município.
+## Deduplicação entre registros
 
-## Data de publicação
+A prevenção de reinserção por `id_anuncio` e a classificação de duplicidades são mecanismos distintos.
 
-A data de publicação é opcional. Quando o portal não disponibiliza essa informação na página de resultados, `data_publicacao` permanece `NULL`.
+O código Python impede a inserção de um identificador já existente. Já a base PostgreSQL/Supabase utilizada no projeto possui o campo `duplicado_de_id`, empregado para relacionar um registro classificado como duplicado ao registro considerado original.
 
-Na OLX também são tratados formatos como:
+O campo `hash_conteudo` é calculado no Python a partir de município, localização, área, preço total e tipo de imóvel e armazenado para rastreabilidade. A regra de classificação que preenche `duplicado_de_id` pertence à camada da base e deve ser documentada separadamente sempre que for alterada.
 
-```text
-Vila Santa Maria11 de jul, 01:49
-CentroHoje, 10:30
-CentroOntem, 09:20
-```
+## Normalização e campos derivados
 
-O horário não é armazenado em `data_publicacao`; o projeto utiliza apenas a data.
-
-## Normalização de valores
-
-`utils/normalizador.py` converte preços e áreas para `float`.
+`utils/normalizador.py` realiza limpeza de texto e conversão de valores numéricos. Preços e áreas são convertidos para `float`.
 
 Exemplos:
 
@@ -146,53 +176,110 @@ R$ 189.990,00   -> 189990.0
 167 m²          -> 167.0
 ```
 
-## Variáveis de ambiente
+Quando `area > 0` e preço e área estão disponíveis, o repository calcula:
 
-Para executar a coleta:
+```text
+preco_m2 = preco_total / area
+```
+
+O tipo de imóvel é inferido a partir do título quando são identificados termos como `terreno`, `lote` ou `loteamento`.
+
+## Localização
+
+O pipeline mantém os campos `cidade`, `cidade_busca` e `endereco`.
+
+Na implementação Python atual, `cidade` e `cidade_busca` recebem o município utilizado na execução da busca, enquanto `endereco` recebe a localização extraída do anúncio.
+
+A qualidade e a granularidade da localização dependem do conteúdo disponibilizado por cada plataforma. Coordenadas geográficas, como latitude e longitude, não são obtidas diretamente pelo scraper.
+
+## Data de publicação
+
+`data_publicacao` é opcional e permanece `NULL` quando a página coletada não disponibiliza essa informação.
+
+Na OLX, o parser também interpreta formatos relativos ou textuais, como:
+
+```text
+Hoje, 10:30
+Ontem, 09:20
+11 de jul, 01:49
+```
+
+O horário não é armazenado; apenas a data é persistida.
+
+## Banco de dados
+
+A persistência é realizada com SQLAlchemy em PostgreSQL. No ambiente do projeto, o banco é hospedado no **Supabase**.
+
+A conexão é configurada por:
 
 ```bash
-export SCRAPINGBEE_API_KEY="sua_chave_aqui"
+export DATABASE_URL="postgresql://usuario:senha@host:porta/banco"
+```
+
+Os campos de data permanecem com tipo `DATE` no PostgreSQL, permitindo filtros, ordenação e operações temporais sem conversão textual.
+
+## Google Planilhas e enriquecimento manual
+
+Além do banco estruturado, os dados são disponibilizados aos pesquisadores por meio de uma planilha no **Google Planilhas**, que consulta a base do Supabase e incorpora novos registros.
+
+A planilha funciona como interface para consulta e complementação manual dos dados. Esse fluxo é utilizado, entre outros casos, para acrescentar informações que não são obtidas diretamente nos anúncios, como latitude e longitude necessárias às etapas posteriores de análise territorial.
+
+O Supabase permanece como fonte estruturada dos dados coletados automaticamente; a planilha atua como camada de disponibilização e enriquecimento manual.
+
+## Automação
+
+O projeto utiliza GitHub Actions.
+
+O workflow `.github/workflows/executar_scraper.yml` está configurado para:
+
+- executar a coleta e o processamento mensalmente;
+- permitir execução manual por `workflow_dispatch`;
+- realizar uma consulta diária ao Supabase para mantê-lo ativo;
+- persistir os JSONs processados no repositório.
+
+O workflow `.github/workflows/testes.yml` executa os testes automaticamente em pushes e pull requests para `main` ou `master`.
+
+## Variáveis de ambiente
+
+Para a implementação atual dos scrapers:
+
+```bash
+export SCRAPINGANT_API_KEY="sua_chave_aqui"
 export DATABASE_URL="sua_url_do_banco"
 ```
 
-Para **processar HTML já salvo e executar testes dos parsers**, não é necessário consumir créditos do ScrapingBee.
+Para reprocessar HTMLs já armazenados, não é necessária uma nova requisição à ScrapingAnt.
 
 ## Instalação
 
-O arquivo de dependências do projeto atualmente se chama `requeriments.txt`:
+O arquivo de dependências do projeto chama-se atualmente `requeriments.txt`:
 
 ```bash
 pip install -r requeriments.txt
 ```
 
-## Executando os testes sem ScrapingBee
+Principais dependências:
 
-Os testes utilizam HTML simulado e banco SQLite em memória. Nenhuma requisição aos portais ou ao ScrapingBee é executada.
+- BeautifulSoup;
+- Requests;
+- SQLAlchemy;
+- psycopg.
+
+## Testes
+
+Os testes podem ser executados com:
 
 ```bash
-python -m unittest tests/test_processamento.py -v
+python -m unittest discover -s tests -p "test_*.py"
 ```
 
-Os testes verificam, entre outros pontos:
+A suíte contém testes específicos para OLX, ZAP Imóveis, Viva Real e Imovelweb, além dos testes gerais de processamento.
 
-- título e URL;
-- texto completo do card;
-- preço e área;
-- data de publicação da OLX;
-- `Hoje` e `Ontem`;
-- virada de ano;
-- persistência dos novos campos;
-- uso da data do lote como `data_busca`.
-
-## Observação sobre anúncios repetidos
-
-Atualmente `id_anuncio` continua sendo único na tabela, e anúncios já existentes são ignorados pelo repository. Isso mantém o comportamento histórico do projeto.
-
-Caso seja necessário analisar a evolução do mesmo anúncio entre diferentes datas de coleta — por exemplo, alteração de preço ou tempo de permanência — essa regra deverá ser modificada para permitir mais de uma observação do mesmo anúncio em datas diferentes.
+Os parsers são testados a partir de HTML controlado, permitindo validar a extração sem depender de requisições reais aos portais durante os testes.
 
 ## Portais suportados
 
 - OLX
 - ZAP Imóveis
-- VivaReal
+- Viva Real
 - Imovelweb
