@@ -13,7 +13,7 @@ on:
 
 jobs:
 
-  # ==========================================
+ # ==========================================
   # MANTER SUPABASE ATIVO
   # ==========================================
   manter-supabase-ativo:
@@ -21,19 +21,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Fazer consulta via API do Supabase
+      - name: Instalar cliente PostgreSQL
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Fazer query direta no PostgreSQL
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          echo "Verificando Supabase..."
-
-          curl --fail --show-error \
-            "$SUPABASE_URL/rest/v1/anuncios?select=id&limit=10" \
-            -H "apikey: $SUPABASE_KEY"
-
-          echo ""
-          echo "Supabase acessado com sucesso."
+          echo "Realizando ping direto no banco de dados Supabase..."
+          psql "$DATABASE_URL" -c "SELECT version();"
+          echo "Supabase mantido ativo com sucesso."
 
   # ==========================================
   # SCRAPER E PROCESSAMENTO
