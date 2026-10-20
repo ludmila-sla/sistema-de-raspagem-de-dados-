@@ -22,7 +22,7 @@ def normalizar_string(texto):
 
 def executar_scraping_imovelweb(estrutura_aps):
     if not API_KEY:
-        logging.error("SCRAPINGBEE_API_KEY não configurada no ambiente.")
+        logging.error("SCRAPINGANT_API_KEY não configurada no ambiente.")
         return
 
     data_atual = datetime.now().strftime("%Y-%m-%d")
