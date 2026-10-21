@@ -56,3 +56,32 @@ def buscar_pagina(url_busca):
 
         if tentativa < MAX_TENTATIVAS:
             time.sleep(2 ** tentativa * 5)
+
+    return None
+
+
+def executar_scraping_imovelweb(estrutura_aps):
+    if not API_KEY:
+        logging.error("SCRAPINGANT_API_KEY não configurada no ambiente.")
+        return
+
+    data_atual = datetime.now().strftime("%Y-%m-%d")
+    output_dir = os.path.join("data", "raw", "imovelweb", data_atual)
+    os.makedirs(output_dir, exist_ok=True)
+
+    for microregiao, municipios in estrutura_aps.items():
+        for municipio in municipios:
+            municipio_slug = normalizar_string(municipio)
+            url_busca = f"https://www.imovelweb.com.br/terrenos-{municipio_slug}-sp.html"
+
+            logging.info(f"Requisitando: {municipio} -> URL: {url_busca}")
+
+            html = buscar_pagina(url_busca)
+            if html is None:
+                logging.error(f"Falha ao obter dados do município {municipio}")
+                continue
+
+            caminho_final = os.path.join(output_dir, f"{municipio_slug}.html")
+            with open(caminho_final, "w", encoding="utf-8") as f:
+                f.write(html)
+            logging.info(f"Sucesso ao salvar arquivo bruto: {caminho_final}")
