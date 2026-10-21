@@ -1,7 +1,8 @@
 import os
+import time
 import logging
-import requests
 import unicodedata
+import requests
 from datetime import datetime
 
 log_dir = os.path.join("logs", "logs")
@@ -16,54 +17,80 @@ logging.basicConfig(
 API_KEY = os.environ.get("SCRAPINGANT_API_KEY")
 URL_GATEWAY = "https://api.scrapingant.com/v2/general"
 
+TIMEOUT = 90
+MAX_TENTATIVAS = 3
+STATUS_COM_RETRY = {409, 423, 500, 502, 503, 504}
+
+
 def normalizar_string(texto):
-    texto_normalizado = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
+    texto_normalizado = unicodedata.normalize("NFKD", texto).encode("ASCII", "ignore").decode("ASCII")
     return texto_normalizado.lower().replace(" ", "-")
+
 
 def gerar_url_vivareal(municipio_slug):
     """Gera a URL do VivaReal focada exclusivamente em venda de Lotes e Terrenos."""
     return f"https://www.vivareal.com.br/venda/sp/{municipio_slug}/lote-terreno_residencial/"
 
+
+def buscar_pagina(url_busca):
+    """Chama o ScrapingAnt com retry e backoff. Retorna o HTML ou None."""
+    headers = {"x-api-key": API_KEY}
+    params = {
+        "url": url_busca,
+        "browser": "false",
+        "proxy_type": "residential",
+        "proxy_country": "BR",
+    }
+
+    for tentativa in range(1, MAX_TENTATIVAS + 1):
+        try:
+            response = requests.get(URL_GATEWAY, params=params, headers=headers, timeout=TIMEOUT)
+        except requests.RequestException as e:
+            logging.warning(f"Erro de rede (tentativa {tentativa}/{MAX_TENTATIVAS}): {e}")
+        else:
+            if response.status_code == 200:
+                return response.text
+
+            if response.status_code not in STATUS_COM_RETRY:
+                logging.error(f"Erro HTTP {response.status_code} (sem retry): {response.text[:200]}")
+                return None
+
+            logging.warning(
+                f"HTTP {response.status_code} (tentativa {tentativa}/{MAX_TENTATIVAS}): {response.text[:200]}"
+            )
+
+        if tentativa < MAX_TENTATIVAS:
+            time.sleep(2 ** tentativa * 5)
+
+    return None
+
+
 def executar_scraping_vivareal(estrutura_aps):
     if not API_KEY:
-        logging.error("SCRAPINGBEE_API_KEY não configurada no ambiente para o VivaReal.")
+        logging.error("SCRAPINGANT_API_KEY não configurada no ambiente para o VivaReal.")
         return
 
     data_atual = datetime.now().strftime("%Y-%m-%d")
     output_dir = os.path.join("data", "raw", "vivareal", data_atual)
     os.makedirs(output_dir, exist_ok=True)
 
-
     for microregiao, municipios in estrutura_aps.items():
         print(f"[*] Processando microrregião VivaReal: {microregiao}")
-        
+
         for municipio in municipios:
             municipio_slug = normalizar_string(municipio)
             url_busca = gerar_url_vivareal(municipio_slug)
-            
+
             logging.info(f"Requisitando VivaReal: {municipio} -> URL: {url_busca}")
-            
-            params = {
-                "api_key": API_KEY,
-                "url": url_busca,
-                "country_code": "br",
-                "premium_proxy": "true",
-                "render_js": "false"
-            }
-            
-            try:
-                response = requests.get(URL_GATEWAY, params=params, timeout=45)
-                if response.status_code == 200:
-                    nome_arquivo = f"{municipio_slug}.html"
-                    caminho_final = os.path.join(output_dir, nome_arquivo)
-                    
-                    with open(caminho_final, "w", encoding="utf-8") as f:
-                        f.write(response.text)
-                    print(f"    [+] Sucesso ao salvar arquivo bruto: {municipio_slug}.html")
-                    logging.info(f"Sucesso ao salvar arquivo bruto VivaReal: {caminho_final}")
-                else:
-                    print(f"    [-] Erro HTTP {response.status_code} para {municipio}")
-                    logging.error(f"Erro HTTP {response.status_code} no VivaReal para o município {municipio}")
-            except Exception as e:
-                print(f"    [-] Falha crítica de rede em {municipio}")
-                logging.exception(f"Falha crítica de rede ao processar VivaReal para o município {municipio}: {str(e)}")
+
+            html = buscar_pagina(url_busca)
+            if html is None:
+                print(f"    [-] Falha ao obter dados de {municipio}")
+                logging.error(f"Falha ao obter dados do VivaReal para o município {municipio}")
+                continue
+
+            caminho_final = os.path.join(output_dir, f"{municipio_slug}.html")
+            with open(caminho_final, "w", encoding="utf-8") as f:
+                f.write(html)
+            print(f"    [+] Sucesso ao salvar arquivo bruto: {municipio_slug}.html")
+            logging.info(f"Sucesso ao salvar arquivo bruto VivaReal: {caminho_final}")
